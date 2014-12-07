@@ -1,0 +1,17 @@
+[core]
+# Use a global .gitignore file.
+excludesfile = ~/.gitignore
+
+# Enable parallel I/O for operations like "git diff".
+# See http://stackoverflow.com/q/18257622/276478
+preloadindex = true
+
+# Use 12 characters for the abbreviated commit hash. I can currently make
+# do with 10, but this should provide a certain level of safety for the
+# near-ish future. See the interesting and well-researched article at
+# http://blog.cuviper.com/2013/11/10/how-short-can-git-abbreviate/
+abbrev = 12
+
+# Make `git rebase` safer on OS X
+# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+trustctime = false
