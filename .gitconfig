@@ -15,3 +15,51 @@ abbrev = 12
 # Make `git rebase` safer on OS X
 # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 trustctime = false
+
+[color]
+# Use colors by default when the output is a terminal that supports them.
+ui = auto
+
+[color "branch"]
+
+current = yellow reverse
+local = yellow
+remote = green
+
+[color "diff"]
+
+meta = yellow bold
+frag = magenta bold # line info
+old = red # deletions
+new = green # additions
+
+[color "status"]
+
+added = yellow
+changed = green
+untracked = cyan
+
+[help]
+
+# Automatically correct and execute mistyped commands
+autocorrect = 1
+
+[diff]
+
+# Use more time to create better diffs. E.g. matching opening/closing braces
+# from neighbour functions.
+algorithm = patience
+
+# Tells Git to detect renames. If set to "true", it will enable basic
+# rename detection. If set to "copies", it will detect copies, as well.
+renames = copies
+
+[merge]
+tool = ksdiff
+
+# Include summaries of merged commits in newly created merge commit messages
+log = true
+
+[push]
+
+default = simple
