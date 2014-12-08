@@ -19,6 +19,11 @@
 
   # Use Sublime Text as the default editor.
   editor = subl
+
+  # Don't mess with line endings when checking out files, but fix files with
+  # CRLF endings accidentally introdced.
+  autocrlf = input
+
 [color]
 
   # Use colors by default when the output is a terminal that supports them.
