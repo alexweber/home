@@ -13,7 +13,7 @@
   # http://blog.cuviper.com/2013/11/10/how-short-can-git-abbreviate/
   abbrev = 12
 
-  # Make `git rebase` safer on OS X
+  # Make `git rebase` safer on OS X.
   # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
   trustctime = false
 
@@ -43,7 +43,7 @@
 
 [help]
 
-  # Automatically correct and execute mistyped commands
+  # Automatically correct and execute mistyped commands.
   autocorrect = 1
 
 [diff]
@@ -60,7 +60,7 @@
 
   tool = ksdiff
 
-  # Include summaries of merged commits in newly created merge commit messages
+  # Include summaries of merged commits in newly created merge commit messages.
   log = true
 
 [push]
