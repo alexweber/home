@@ -82,6 +82,9 @@
   # View abbreviated SHA, description, and graph of the latest 20 commits.
   l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
+  # View alternative, more detailed log, description and graph of latest commits.
+  ld = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+
   # Show a concise status of the working directory, along with the branch
   # and the number of commits behind and/or ahead.
   s = status --short --branch
