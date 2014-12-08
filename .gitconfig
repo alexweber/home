@@ -17,6 +17,8 @@
   # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
   trustctime = false
 
+  # Use Sublime Text as the default editor.
+  editor = subl
 [color]
 
   # Use colors by default when the output is a terminal that supports them.
