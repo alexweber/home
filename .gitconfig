@@ -24,6 +24,9 @@
   # CRLF endings accidentally introdced.
   autocrlf = input
 
+  # Don't normally care about permissions, this can be overriden per repo.
+  filemode = false
+
 [color]
 
   # Use colors by default when the output is a terminal that supports them.
