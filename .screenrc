@@ -6,3 +6,7 @@ defscrollback 32000
 
 # Always start `screen` with UTF-8 enabled (`screen -U`).
 defutf8 on
+
+# Don't block command output if the terminal stops responding (for example, if
+# the SSH connection times out).
+nonblock on
