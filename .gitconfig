@@ -68,6 +68,7 @@
 
 [merge]
 
+  # Use Kaleidoscope app for merging.
   tool = ksdiff
 
   # Include summaries of merged commits in newly created merge commit messages.
@@ -85,8 +86,8 @@
   # View alternative, more detailed log, description and graph of latest commits.
   ld = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
 
-  # Show a concise status of the working directory, along with the branch
-  # and the number of commits behind and/or ahead.
+  # Show a concise status of the working directory, along with the branch and
+  # the number of commits behind and/or ahead.
   s = status --short --branch
 
   # Switch to a branch, creating it if necessary.
@@ -106,7 +107,7 @@
   # Show the diff between the latest commit and the current state.
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
-  # Clone a repository including all submodules
+  # Clone a repository including all submodules.
   c = clone --recursive
 
   # Commit.
@@ -129,6 +130,5 @@
   # List contributors with number of commits.
   contributors = shortlog --summary --numbered
 
-  # Remove branches that have already been merged with master
-  # a.k.a. ‘delete merged’
+  # Remove branches that have already been merged with master (delete merged).
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
