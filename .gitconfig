@@ -90,6 +90,9 @@
   # the number of commits behind and/or ahead.
   s = status --short --branch
 
+  # Status.
+  st = status
+
   # Switch to a branch, creating it if necessary.
   go = checkout -B
 
