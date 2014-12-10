@@ -1,7 +1,8 @@
 # OS files.
 .DS_Store
+__MACOSX
 
-# Files that might appear on external disks
+# Files that might appear on external disks.
 .Spotlight-V100
 .Trashes
 
