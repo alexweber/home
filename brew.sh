@@ -44,6 +44,7 @@ brew install ack
 brew install autoconf
 brew install automake
 brew install bfg
+brew install colordiff
 brew install composer
 brew install dtrx
 brew install gettext
