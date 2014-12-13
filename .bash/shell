@@ -36,11 +36,14 @@ export LC_ALL="en_US.UTF-8";
 shopt -s histreedit;
 
 # Keep a reasonably long history.
-export HISTSIZE=4096;
+# export HISTSIZE=4096;
+# Keep a super long history.
+export HISTSIZE=32768;
 
 # Keep even more history lines inside the file, so we can still look up
 # previous commands without needlessly cluttering the current shell's history.
-export HISTFILESIZE=16384;
+# export HISTFILESIZE=16384;
+export HISTFILESIZE=65536;
 
 # When executing the same command twice or more in a row, only store it once.
 export HISTCONTROL=ignoredups;
