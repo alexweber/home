@@ -75,10 +75,12 @@ $is_dry_run || target_dir="$(cd "$target_dir" > /dev/null; pwd)";
 # Create the array of files to symlink.
 source_files=();
 ignored_files=(
-.gitignore
 COPYING
 README.md
 install.sh
+osx.sh
+brew.sh
+cask.sh
 );
 while read -d $'\0' file; do
   file="${file#./}";
