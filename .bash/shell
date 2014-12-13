@@ -22,18 +22,9 @@ shopt -s cdspell;
 # Note that you can still override this with ">|".
 #set -o noclobber;
 
-# Prefer English and use UTF-8.
-printf -v available_locales ' %s ' $(locale -a);
-for lang in en_US en_GB en; do
-  for locale in "$lang".{UTF-8,utf8}; do
-    if [[ "$available_locales" =~ " $locale " ]]; then
-      export LC_ALL="$locale";
-      export LANG="$lang";
-      break 2;
-    fi;
-  done;
-done;
-unset available_locales lang locale;
+# Prefer US English and use UTF-8
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
 
 # History
 # -----------------------------------------------------------------------------
