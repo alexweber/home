@@ -2,19 +2,25 @@
 
 These are my dotfiles. There are many like them, but these ones are mine.
 
-##Installation
+## Usage
 
-* Run `install.sh`
-* This will overwrite stuff in your home folder!
+To install, clone this repo wherever you want:
 
-##System setup
+`git clone https://github.com/alexweber/home.git && home/install.sh`
 
-* Run `osx.sh` to set up a new Mac
+To update, go the directory where you cloned the repo and run:
 
-##Homebrew
+`git pull && ./install.sh`
 
-* Run `brew.sh` to install/update command-line tools using Homebrew
+## Additional stuff
 
-##Caskroom
+* `osx.sh` Set up sensible defaults for OS X settings and a couple other cool tweaks
+* `brew.sh` Install/update command-line tools using Homebrew
+* `cask.sh` Install native OS X apps using Homebrew Cask
 
-* Run `cask.sh` to install native OSX apps using Homebrew
+## Credits
+
+This is heavily based on the work of people much smarter than me:
+
+* [Mathias Bynens' dotfiles](https://github.com/mathiasbynens/dotfiles)
+* [Jan Moesen's Tilde](https://github.com/janmoesen/tilde)
