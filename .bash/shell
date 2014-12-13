@@ -52,6 +52,9 @@ export HISTCONTROL=ignoredups;
 # The xterm colour escapes require special care when piping; e.g. "| less -R".
 export HISTTIMEFORMAT="${FG_BLUE}${FONT_BOLD}%Y/%m/%d %H:%M:%S${FONT_RESET}  ";
 
+# Make some commands not show up in history.
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+
 # Screen sessions
 # -----------------------------------------------------------------------------
 # Enable SSH agent forwarding ("ForwardAgent yes"/"ssh -A") with persistent
