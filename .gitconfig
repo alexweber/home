@@ -21,7 +21,7 @@
   editor = subl
 
   # Don't mess with line endings when checking out files, but fix files with
-  # CRLF endings accidentally introdced.
+  # CRLF endings introduced accidentally.
   autocrlf = input
 
   # Don't normally care about permissions, this can be overriden per repo.
