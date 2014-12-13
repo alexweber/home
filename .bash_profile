@@ -1,86 +1,43 @@
-#!/bin/bash
-
-# Shell options, environment variables and readline settings
-# =============================================================================
-
-# Globbing and completion
-# -----------------------------------------------------------------------------
-# Case-insensitive globbing.
-shopt -s nocaseglob;
-
-# Do not autocomplete when accidentally pressing Tab on an empty line. (It takes
-# forever and yields "Display all 15 gazillion possibilites?")
-shopt -s no_empty_cmd_completion;
-
-# Append to the Bash history file, rather than overwriting it.
-shopt -s histappend;
-
-# Autocorrect typos in path names when using `cd`.
-shopt -s cdspell;
-
-# Do not overwrite files when redirecting using ">".
-# Note that you can still override this with ">|".
-#set -o noclobber;
-
-# Prefer English and use UTF-8.
-printf -v available_locales ' %s ' $(locale -a);
-for lang in en_US en_GB en; do
-  for locale in "$lang".{UTF-8,utf8}; do
-    if [[ "$available_locales" =~ " $locale " ]]; then
-      export LC_ALL="$locale";
-      export LANG="$lang";
-      break 2;
-    fi;
-  done;
+for file in "$(dirname "$BASH_SOURCE")"/.bash/{shell,commands,prompt,extra}; do
+  [ -r "$file" ] && source "$file";
 done;
-unset available_locales lang locale;
+unset file;
 
-# History
+
+
+# Other Misc stuff
 # -----------------------------------------------------------------------------
-# When the command contains an invalid history operation (for instance when
-# using an unescaped "!" (I get that a lot in quick e-mails and commit
-# messages) or a failed substitution (e.g. "^foo^bar" when there was no "foo"
-# in the previous command line), do not throw away the command line, but let me
-# correct it.
-shopt -s histreedit;
 
-# Keep a reasonably long history.
-export HISTSIZE=4096;
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+for file in "$(dirname "$BASH_SOURCE")"/.bash/{shell,commands,prompt,extra}; do
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
 
-# Keep even more history lines inside the file, so we can still look up
-# previous commands without needlessly cluttering the current shell's history.
-export HISTFILESIZE=16384;
+# Enable some Bash 4 features when possible:
+# * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
+# * Recursive globbing, e.g. `echo **/*.txt`
+for option in autocd globstar; do
+  shopt -s "$option" 2> /dev/null;
+done;
 
-# When executing the same command twice or more in a row, only store it once.
-export HISTCONTROL=ignoredups;
-
-# Keep track of the time the commands were executed.
-# The xterm colour escapes require special care when piping; e.g. "| less -R".
-export HISTTIMEFORMAT="${FG_BLUE}${FONT_BOLD}%Y/%m/%d %H:%M:%S${FONT_RESET}  ";
-
-# Screen sessions
-# -----------------------------------------------------------------------------
-# Enable SSH agent forwarding ("ForwardAgent yes"/"ssh -A") with persistent
-# screen sessions.
-if [ "$TERM" != 'screen' ]; then
-  # Persist the variable so we can source it in existing sessions.
-  if [ -n "$SSH_AUTH_SOCK" ]; then
-    if [ ! -d ~/.ssh ]; then
-      mkdir -p ~/.ssh;
-      chmod 700 ~/.ssh;
-    fi;
-    printf 'export SSH_AUTH_SOCK=%q\n' "$SSH_AUTH_SOCK" >| ~/.ssh/environment.screen;
-  fi;
-else
-  # Re-read the variable after each command. This may seem like overkill,
-  # but the screen session could have been detached and then reattached from
-  # another SSH session, so you never know when the SSH authentication
-  # socket might have changed.
-  export PROMPT_COMMAND="
-  ret=\$?;
-  [ -f ~/.ssh/environment.screen ] && source ~/.ssh/environment.screen;
-  function __return { unset __return; return \$1; }
-  __return \$ret;
-  ${PROMPT_COMMAND:-}
-  ";
+# Add tab completion for many Bash commands
+if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+  source "$(brew --prefix)/etc/bash_completion";
+elif [ -f /etc/bash_completion ]; then
+  source /etc/bash_completion;
 fi;
+
+# Enable tab completion for `g` by marking it as an alias for `git`
+if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+  complete -o default -o nospace -F _git g;
+fi;
+
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
+
+# Add tab completion for `defaults read|write NSGlobalDomain`
+# You could just use `-g` instead, but I like being explicit
+complete -W "NSGlobalDomain" defaults;
