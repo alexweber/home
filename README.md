@@ -20,9 +20,10 @@ To update, go the directory where you cloned the repo and run:
 
 ## Credits
 
-This is heavily based on the work of people much smarter than me:
+This is totally based on the work of people much smarter than me:
 
 * [Mathias Bynens' dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [Jan Moesen's Tilde](https://github.com/janmoesen/tilde)
 * [Gianni Chiappetta](https://github.com/gf3/dotfiles/tree/v1.0.0)
+* [Matijs Brinkhuis](https://github.com/matijs/dotfiles)
 * [alrra](https://github.com/alrra/dotfiles)
