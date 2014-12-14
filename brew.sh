@@ -51,12 +51,17 @@ brew install git
 brew install hub
 brew install libpng
 brew install libsass
+# brew install phantomjs
 brew install homebrew/php/PHP53
 brew install qcachegrind
 brew install rename
 # brew install solr36
 brew install tree
 brew install zopfli
+
+# Use latest rsync rather than out-dated OS X rsync install separately from the
+# main formulae list to fix gh-19.
+brew install https://raw.github.com/Homebrew/homebrew-dupes/master/rsync.rb
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
