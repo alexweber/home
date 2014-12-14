@@ -22,3 +22,9 @@ function o() {
 function tre() {
   tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function key() {
+  cd ~/.ssh
+  ls
+  pbcopy < ~/.ssh/id_rsa.pub
+}
