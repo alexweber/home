@@ -24,3 +24,4 @@ This is heavily based on the work of people much smarter than me:
 
 * [Mathias Bynens' dotfiles](https://github.com/mathiasbynens/dotfiles)
 * [Jan Moesen's Tilde](https://github.com/janmoesen/tilde)
+* [alrra](https://github.com/alrra/dotfiles)
