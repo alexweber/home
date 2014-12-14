@@ -135,3 +135,6 @@
 
   # Remove branches that have already been merged with master (delete merged).
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+  # Show branches that have already been merged with current branch.
+  sm = show-merges
