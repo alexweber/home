@@ -126,6 +126,10 @@ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 # Link Homebrew casks in `/Applications` rather than `~/Applications`.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 
+# Make new shells get the history lines from all previous shells instead of the
+# default "last window closed" history.
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
 # Enable SSH agent forwarding ("ForwardAgent yes"/"ssh -A") with persistent
 # screen sessions.
 if [ "$TERM" != 'screen' ]; then
