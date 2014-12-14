@@ -741,12 +741,20 @@ defaults write com.twitter.twitter-mac ShowFullNames -bool true
 defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
+# Alfred.app                                                                  #
+###############################################################################
+
+# Alow using the Dropbox "Apps" folder to sync Alfred preferences.
+# See: http://support.alfredapp.com/kb:dropbox-apps-folder
+defaults write com.runningwithcrayons.Alfred-Preferences dropbox.allowappsfolder -bool true
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
 "Dock" "Finder" "Mail" "Messages" "Safari" "SizeUp" "SystemUIServer" \
-"Terminal" "Transmission" "Twitter" "iCal"; do
+"Terminal" "Transmission" "Twitter" "iCal" "Alfred"; do
   killall "${app}" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
