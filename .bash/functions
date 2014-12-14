@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Create a new directory and enter it.
+function mkd() {
+  mkdir -p "$@" && cd "$_";
+}
+
 # `o` with no arguments opens the current directory, otherwise opens the given
 # location
 function o() {
