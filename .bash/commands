@@ -104,11 +104,3 @@ fi;
 
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto";
-
-# Use Git’s colored diff when available
-hash git &>/dev/null;
-if [ $? -eq 0 ]; then
-  function diff() {
-    git diff --no-index --color-words "$@";
-  }
-fi;
