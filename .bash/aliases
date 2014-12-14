@@ -12,6 +12,16 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# Confirm before overwriting
+# I know it is bad practice to override the default commands, but this is for
+# my own safety. If you really want the original "instakill" versions, you can
+# use "command rm", "\rm", or "/bin/rm" inside your own commands, aliases, or
+# shell functions. Note that separate scripts are not affected by the aliases
+# defined here.
+#alias cp='cp -i';
+#alias mv='mv -i';
+#alias rm='rm -i';
+
 # List only directories
 alias lsd="ls -lF | grep --color=never '^d'"
 

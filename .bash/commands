@@ -56,17 +56,6 @@ unset {old,new}_path{,s} path{s,}_to_add;
 done;
 unset method;
 
-# Confirm before overwriting
-# -----------------------------------------------------------------------------
-# I know it is bad practice to override the default commands, but this is for
-# my own safety. If you really want the original "instakill" versions, you can
-# use "command rm", "\rm", or "/bin/rm" inside your own commands, aliases, or
-# shell functions. Note that separate scripts are not affected by the aliases
-# defined here.
-#alias cp='cp -i';
-#alias mv='mv -i';
-#alias rm='rm -i';
-
 # Editors and pagers
 # -----------------------------------------------------------------------------
 export EDITOR='subl';
