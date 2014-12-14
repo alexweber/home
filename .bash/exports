@@ -114,14 +114,16 @@ export HISTSIZE=32768;
 export HISTFILESIZE=65536;
 
 # When executing the same command twice or more in a row, only store it once.
-export HISTCONTROL=ignoredups;
+# export HISTCONTROL=ignoredups;
+# Ignore commands that start with spaces and duplicates
+export HISTCONTROL=ignoreboth
 
 # Keep track of the time the commands were executed.
 # The xterm colour escapes require special care when piping; e.g. "| less -R".
 export HISTTIMEFORMAT="${FG_BLUE}${FONT_BOLD}%Y/%m/%d %H:%M:%S${FONT_RESET}  ";
 
 # Make some commands not show up in history.
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+export HISTIGNORE="ls:cd:cd:ll:ls:la:history -:pwd:exit:date:* --help";
 
 # Link Homebrew casks in `/Applications` rather than `~/Applications`.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";

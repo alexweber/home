@@ -3,9 +3,15 @@
 # Case-insensitive globbing.
 shopt -s nocaseglob;
 
+# Include filenames beginning with a "." in the filename expansion
+shopt -s dotglob
+
 # Do not autocomplete when accidentally pressing Tab on an empty line. (It takes
 # forever and yields "Display all 15 gazillion possibilites?")
 shopt -s no_empty_cmd_completion;
+
+# Save all lines of a multiple-line command in the same history entry
+shopt -s cmdhist
 
 # Append to the Bash history file, rather than overwriting it.
 shopt -s histappend;
