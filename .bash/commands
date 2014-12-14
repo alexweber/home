@@ -4,16 +4,16 @@
 # -----------------------------------------------------------------------------
 # List the directories we want to add to the PATH variable, if they exist.
 paths_to_add=(
-  # Private "bin"
+  # Private "bin".
   "$HOME/bin"
   # Homebrew.
   /usr/local/{,s}bin
-  # Prefer updated GNU core utilities over default OSX ones
+  # Prefer updated GNU core utilities over default OSX ones.
   /usr/local/opt/coreutils/libexec/gnubin
-  # System
+  # System.
   /{,s}bin
   /usr/{,s}bin
-  # X binaries
+  # X binaries.
   /usr/X11/bin
 );
 
@@ -44,7 +44,7 @@ printf -v PATH "%s:" "${new_paths[@]}";
 export PATH="${PATH%:}";
 unset {old,new}_path{,s} path{s,}_to_add;
 
-# Prefer Homebrew's netcat
+# Prefer Homebrew's netcat.
 [ -x /usr/local/bin/netcat ] && hash -p /usr/local/bin/netcat nc;
 
 # OS X's file system is case-insensitive by default, so use aliases to get
@@ -54,8 +54,7 @@ unset {old,new}_path{,s} path{s,}_to_add;
 done;
 unset method;
 
-# Editors and pagers
-# -----------------------------------------------------------------------------
+# Use Sublime Text as default editor.
 export EDITOR='subl';
 
 # Make less the default pager, and specify some useful defaults.
@@ -86,18 +85,68 @@ export LESS="${less_options[*]}";
 unset less_options;
 export PAGER='less';
 
-# Don’t clear the screen after quitting a manual page
+# Don’t clear the screen after quitting a manual page.
 export MANPAGER="less -X";
 
-# Highlight section titles in manual pages
+# Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
 
-# Colors
-# -----------------------------------------------------------------------------
 # Always use colour output for "ls".
 if ! [[ "$OSTYPE" =~ ^darwin ]]; then
   export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:';
 fi;
 
-# Always enable colored `grep` output
+# Always enable colored `grep` output.
 export GREP_OPTIONS="--color=auto";
+
+# Prefer US English and use UTF-8.
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
+
+# Keep a reasonably long history.
+# export HISTSIZE=4096;
+# Keep a super long history.
+export HISTSIZE=32768;
+
+# Keep even more history lines inside the file, so we can still look up
+# previous commands without needlessly cluttering the current shell's history.
+# export HISTFILESIZE=16384;
+export HISTFILESIZE=65536;
+
+# When executing the same command twice or more in a row, only store it once.
+export HISTCONTROL=ignoredups;
+
+# Keep track of the time the commands were executed.
+# The xterm colour escapes require special care when piping; e.g. "| less -R".
+export HISTTIMEFORMAT="${FG_BLUE}${FONT_BOLD}%Y/%m/%d %H:%M:%S${FONT_RESET}  ";
+
+# Make some commands not show up in history.
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+
+# Link Homebrew casks in `/Applications` rather than `~/Applications`.
+export HOMEBREW_CASK_OPTS="--appdir=/Applications";
+
+# Enable SSH agent forwarding ("ForwardAgent yes"/"ssh -A") with persistent
+# screen sessions.
+if [ "$TERM" != 'screen' ]; then
+  # Persist the variable so we can source it in existing sessions.
+  if [ -n "$SSH_AUTH_SOCK" ]; then
+    if [ ! -d ~/.ssh ]; then
+      mkdir -p ~/.ssh;
+      chmod 700 ~/.ssh;
+    fi;
+    printf 'export SSH_AUTH_SOCK=%q\n' "$SSH_AUTH_SOCK" >| ~/.ssh/environment.screen;
+  fi;
+else
+  # Re-read the variable after each command. This may seem like overkill,
+  # but the screen session could have been detached and then reattached from
+  # another SSH session, so you never know when the SSH authentication
+  # socket might have changed.
+  export PROMPT_COMMAND="
+  ret=\$?;
+  [ -f ~/.ssh/environment.screen ] && source ~/.ssh/environment.screen;
+  function __return { unset __return; return \$1; }
+  __return \$ret;
+  ${PROMPT_COMMAND:-}
+  ";
+fi;

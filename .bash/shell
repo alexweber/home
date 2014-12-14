@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Shell options, environment variables and readline settings
-# =============================================================================
-
-# Globbing and completion
-# -----------------------------------------------------------------------------
 # Case-insensitive globbing.
 shopt -s nocaseglob;
 
@@ -22,68 +17,12 @@ shopt -s cdspell;
 # Note that you can still override this with ">|".
 #set -o noclobber;
 
-# Prefer US English and use UTF-8
-export LANG="en_US.UTF-8";
-export LC_ALL="en_US.UTF-8";
-
-# History
-# -----------------------------------------------------------------------------
 # When the command contains an invalid history operation (for instance when
 # using an unescaped "!" (I get that a lot in quick e-mails and commit
 # messages) or a failed substitution (e.g. "^foo^bar" when there was no "foo"
 # in the previous command line), do not throw away the command line, but let me
 # correct it.
 shopt -s histreedit;
-
-# Keep a reasonably long history.
-# export HISTSIZE=4096;
-# Keep a super long history.
-export HISTSIZE=32768;
-
-# Keep even more history lines inside the file, so we can still look up
-# previous commands without needlessly cluttering the current shell's history.
-# export HISTFILESIZE=16384;
-export HISTFILESIZE=65536;
-
-# When executing the same command twice or more in a row, only store it once.
-export HISTCONTROL=ignoredups;
-
-# Keep track of the time the commands were executed.
-# The xterm colour escapes require special care when piping; e.g. "| less -R".
-export HISTTIMEFORMAT="${FG_BLUE}${FONT_BOLD}%Y/%m/%d %H:%M:%S${FONT_RESET}  ";
-
-# Make some commands not show up in history.
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
-
-# Screen sessions
-# -----------------------------------------------------------------------------
-# Enable SSH agent forwarding ("ForwardAgent yes"/"ssh -A") with persistent
-# screen sessions.
-if [ "$TERM" != 'screen' ]; then
-  # Persist the variable so we can source it in existing sessions.
-  if [ -n "$SSH_AUTH_SOCK" ]; then
-    if [ ! -d ~/.ssh ]; then
-      mkdir -p ~/.ssh;
-      chmod 700 ~/.ssh;
-    fi;
-    printf 'export SSH_AUTH_SOCK=%q\n' "$SSH_AUTH_SOCK" >| ~/.ssh/environment.screen;
-  fi;
-else
-  # Re-read the variable after each command. This may seem like overkill,
-  # but the screen session could have been detached and then reattached from
-  # another SSH session, so you never know when the SSH authentication
-  # socket might have changed.
-  export PROMPT_COMMAND="
-  ret=\$?;
-  [ -f ~/.ssh/environment.screen ] && source ~/.ssh/environment.screen;
-  function __return { unset __return; return \$1; }
-  __return \$ret;
-  ${PROMPT_COMMAND:-}
-  ";
-fi;
-
-# Other misc tweaks
-# -----------------------------------------------------------------------------
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
@@ -92,24 +31,21 @@ for option in autocd globstar; do
   shopt -s "$option" 2> /dev/null;
 done;
 
-# Add tab completion for many Bash commands
+# Add tab completion for many Bash commands.
 if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
   source "$(brew --prefix)/etc/bash_completion";
 elif [ -f /etc/bash_completion ]; then
   source /etc/bash_completion;
 fi;
 
-# Enable tab completion for `g` by marking it as an alias for `git`
+# Enable tab completion for `g` by marking it as an alias for `git`.
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
   complete -o default -o nospace -F _git g;
 fi;
 
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards.
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
 
-# Add tab completion for `defaults read|write NSGlobalDomain`
-# You could just use `-g` instead, but I like being explicit
+# Add tab completion for `defaults read|write NSGlobalDomain`.
+# You could just use `-g` instead, but I like being explicit.
 complete -W "NSGlobalDomain" defaults;
-
-# Link Homebrew casks in `/Applications` rather than `~/Applications`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications";
