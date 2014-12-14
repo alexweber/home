@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Pre-configured vars. Change this if you're not me.
+# @TODO figure out a better way to handle this.
+DBUSER='alex'
+DBPASS='alex123'
+
+# First parameter is database name.
+DBNAME=$1
+
+if [ -n "$DBNAME" ]; then
+  read -p "Create database: $DBNAME? (y/n) " RESP
+
+  # @TODO make this more robust; check if db already exists, offer to truncate?
+  if [ "$RESP" = "y" ]; then
+    mysql -u$DBUSER -p$DBPASS -Nse "CREATE DATABASE \`$DBNAME\` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;"
+
+    echo "Database created!"
+  fi
+else
+  echo "Please specify a database name."
+fi
