@@ -18,6 +18,7 @@ brew install caskroom/cask/brew-cask
 brew upgrade brew-cask
 
 # Add versions cask tap (betas, nightly releases, old versions).
+# This is required for Chrome Canary.
 brew tap caskroom/versions
 
 # Install apps.
