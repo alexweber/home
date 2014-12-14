@@ -138,3 +138,9 @@
 
   # Show branches that have already been merged with current branch.
   sm = show-merges
+
+  # Undo last commit.
+  u = reset --soft HEAD~1
+
+  # Remove last commit.
+  rlc = !git reset --hard HEAD~1
