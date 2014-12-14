@@ -58,3 +58,37 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Open with Photoshop
+alias photoshop='open -a "Adobe Photoshop CS6"'
+
+# Drush uninstall.
+alias dun="drush pm-uninstall"
+
+# PHP Code Sniffer for Drupal.
+# This requires Composer and the Drupal "Coder" module.
+alias codercs="phpcs --standard=~/.composer/vendor/drupal/coder/coder_sniffer/Drupal/ --extensions=php,module,inc,install,test,profile,theme --encoding=utf-8"
+
+# PHP Code Sniffer for Drupal - Bluetent version.
+alias btcs="phpcs --standard=~/Bluetent/code-sniffer/Drupal --extensions=php,module,inc,install,test,profile,theme,js,sass,scss --encoding=utf-8"
+
+# Run simpletest from the terminal in a Drupal 7 site root.
+alias simpletest="php scripts/run-tests.sh"
+
+# Drupal 7.
+export PATH=/Applications/MAMP/bin/php/php5.3.29/bin:$PATH
+export DRUSH_PHP=/Applications/MAMP/bin/php/php5.3.29/bin/php
+
+# Drupal 8.
+#export PATH=/Applications/MAMP/bin/php/php5.4.33/bin:$PATH
+#export DRUSH_PHP=/Applications/MAMP/bin/php/php5.4.33/bin/php
+
+# Drush for Drupal 8 (git clone - no official release yet)
+alias d8='DRUSH_PHP=/Applications/MAMP/bin/php/php5.4.33/bin/php ~/Projects/drupal8/drush/drush'
+
+# PHP 5.4 for Drupal 8 in the command line.
+alias php54='/Applications/MAMP/bin/php/php5.4.33/bin/php'
+
+# @TODO drush autocomplete!
+# @TODO setup pear stuff
+# @TODO cleanup Drupal 7 vs 8 stuff
