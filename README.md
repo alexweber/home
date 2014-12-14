@@ -14,8 +14,8 @@ To update, go the directory where you cloned the repo and run:
 
 ## Additional stuff
 
-* `osx.sh` Set up sensible defaults for OS X settings and a couple other cool tweaks
-* `brew.sh` Install/update command-line tools using Homebrew
+* `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
+* `brew.sh` Install command-line tools using Homebrew
 * `cask.sh` Install native OS X apps using Homebrew Cask
 
 ## Credits
