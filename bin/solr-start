@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# This is just my crappy way of starting my local multicore dev solr instance :)
+
+cd ~/Servers/apache-solr-3.6.2/drupal && java -jar start.jar
