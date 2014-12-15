@@ -23,6 +23,7 @@ brew tap caskroom/versions
 
 # Install apps.
 brew cask install alfred
+brew cask install android-studio
 brew cask install atom
 brew cask install appzapper
 # brew cask install boom
