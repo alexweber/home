@@ -26,6 +26,7 @@ alias .....="cd ../../../.."
 alias lsd="ls -lF | grep --color=never '^d'"
 
 # Always use colour output for "ls".
+# @TODO creation in functions? or get rid of if entirely and go all mac?
 if [[ "$OSTYPE" =~ ^darwin ]]; then
   alias ls='command ls -G';
 else
@@ -98,4 +99,4 @@ alias php54='/Applications/MAMP/bin/php/php5.4.33/bin/php'
 
 # @TODO drush autocomplete!
 # @TODO setup pear stuff
-# @TODO cleanup Drupal 7 vs 8 stuff
+# @TODO cleanup Drupal 7 vs 8 stuff (var for php minor versions to sub in multiple places seamlessly?)
