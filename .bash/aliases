@@ -71,6 +71,9 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Open with Photoshop.
 alias photoshop='open -a "Adobe Photoshop CS6"'
 
+# Open Chrome Canary with web security disabled to overcome CORS issues for local dev.
+alias corsdev="open -n -a /opt/homebrew-cask/Caskroom/google-chrome-canary/latest/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --disable-web-security"
+
 ### DRUPAL STUFF ###
 # @TODO clean this up! :)
 
@@ -100,9 +103,6 @@ alias d8='DRUSH_PHP=/Applications/MAMP/bin/php/php5.4.33/bin/php ~/Projects/drup
 
 # PHP 5.4 for Drupal 8 in the command line.
 alias php54='/Applications/MAMP/bin/php/php5.4.33/bin/php'
-
-# Open Chrome Canary with web security disabled to overcome CORS issues for local dev.
-alias corsdev="open -n -a /opt/homebrew-cask/Caskroom/google-chrome-canary/latest/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --disable-web-security"
 
 # @TODO drush autocomplete!
 # @TODO setup pear stuff
