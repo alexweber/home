@@ -28,6 +28,7 @@ brew cask install atom
 brew cask install appzapper
 # brew cask install boom
 brew cask install ccleaner
+brew cask install cocoarestclient
 # brew cask install dash
 brew cask install dosbox
 brew cask install dropbox
