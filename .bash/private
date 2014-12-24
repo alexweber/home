@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# Private bash configuration.
+#
+# Use this file to store private configuration required by some of the other
+# scripts. DO NOT put this under version control in a public repo! :)
