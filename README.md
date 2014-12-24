@@ -4,11 +4,11 @@ These are my dotfiles. There are many like them, but these ones are mine.
 
 ## Usage
 
-To install, clone this repo wherever you want:
+To install, clone this repo and run the script:
 
 `git clone https://github.com/alexweber/home.git && home/install.sh`
 
-To update, go the directory where you cloned the repo and run:
+To update, go the directory where you cloned the repo and run the script:
 
 `git pull && ./install.sh`
 
@@ -20,7 +20,7 @@ To update, go the directory where you cloned the repo and run:
 
 ## Credits
 
-This is totally based on the work of people much smarter than me:
+Most of this was based on work by these awesome people:
 
 * Mathias Bynens https://github.com/mathiasbynens/dotfiles
 * Jan Moesen https://github.com/janmoesen/tilde
