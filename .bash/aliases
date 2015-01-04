@@ -91,7 +91,7 @@ alias codercs="phpcs --standard=~/.composer/vendor/drupal/coder/coder_sniffer/Dr
 alias btcs="phpcs --standard=~/Bluetent/code-sniffer/Drupal --extensions=php,module,inc,install,test,profile,theme,js,sass,scss --encoding=utf-8"
 
 # Run simpletest from the terminal in a Drupal 7 site root.
-alias simpletest="php scripts/run-tests.sh"
+alias simpletest="php scripts/run-tests.sh --color --verbose"
 
 # Drupal 7.
 export PATH=/Applications/MAMP/bin/php/php5.3.29/bin:$PATH
