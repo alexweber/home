@@ -16,16 +16,13 @@ if [ -n "$DBNAME" ]; then
       read -p "Database $DBNAME already exists, truncate it? (y/n) " RESP
 
       if [ "$RESP" = "y" ]; then
-        mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -Nse "show tables '$DBNAME'" | while read table; do mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -e "drop table $table" $DBNAME; done
+        mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -Nse "USE '$DBNAME'; SHOW TABLES;" | while read table; do mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -e "drop table $table" $DBNAME; done
         echo "Database truncated!"
-      else
-        echo "Script aborted."
-        exit;
       fi
+    else
+      mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -Nse "CREATE DATABASE \`$DBNAME\` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;"
+      echo "Database created!"
     fi
-
-    mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -Nse "CREATE DATABASE \`$DBNAME\` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;"
-    echo "Database created!"
   fi
 else
   echo "Please specify a database name."
