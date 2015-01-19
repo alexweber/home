@@ -9,6 +9,10 @@ These are my dotfiles. There are many like them, but these ones are mine.
 * To install on a new machine, run `./home.sh`
 * To update either installation, go run `git pull && ./dotfiles.sh`
 
+## Customization
+
+In order to keep private info from public repos, use the `.bash/private` file; edit it and then run `git update-index --assume-unchanged private` in order to ignore the file's changes.
+
 ## Additional scripts
 
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
