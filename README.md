@@ -1,4 +1,4 @@
-#Home (aka: Alex's dotfiles)
+# Home (aka: Alex's dotfiles)
 
 These are my dotfiles. There are many like them, but these ones are mine.
 
@@ -12,7 +12,7 @@ To update, go the directory where you cloned the repo and run the script:
 
 `git pull && ./install.sh`
 
-## Additional stuff
+## Additional scripts
 
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `brew.sh` Install command-line tools using Homebrew
