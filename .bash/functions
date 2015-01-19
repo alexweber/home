@@ -14,8 +14,6 @@ function tre() {
 }
 
 # Copy public key,
-function key() {
-  cd ~/.ssh
-  ls
+function pk() {
   pbcopy < ~/.ssh/id_rsa.pub
 }
