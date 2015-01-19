@@ -56,6 +56,9 @@ if (k)
 # List only directories.
 alias lsd='ls -l | grep "^d"'
 
+# Undo a Git push.
+alias undopush="git push -f origin HEAD^:master"
+
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
