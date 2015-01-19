@@ -702,6 +702,9 @@ cp -r .init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\
 # Install Package Control plugin
 curl -o ~/Library/Application\ Support/Sublime\ Text*/Installed\ Packages/Package\ Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package
 
+# Install Indent XML plugin.
+git clone git@github.com:alek-sys/sublimetext_indentxml.git  ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Indent\ XML
+
 ###############################################################################
 # Transmission.app                                                            #
 ###############################################################################
