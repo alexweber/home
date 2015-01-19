@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# First param is database name.
+DBNAME=$1
+
+# MYSQL_ROOT_USER and MYSQL_ROOT_PASS are defined in the "private" include.
+source "$HOME/.bash/private"
+
+if [ -n "$DBNAME" ]; then
+  read -p "Truncate database: $DBNAME? (y/n) " RESP
+
+  if [ "$RESP" = "y" ]; then
+    DBEXISTS=$(mysql -u$MYSQL_ROOT_USER -p"$MYSQL_ROOT_PASS" --batch --skip-column-names -e "SHOW DATABASES LIKE '"$DBNAME"';" | grep "$DBNAME" > /dev/null; echo "$?");
+
+    if [ $DBEXISTS -eq 0 ];then
+      mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -Nse "USE '$DBNAME'; SHOW TABLES;" | while read table; do mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -e "drop table $table" $DBNAME; done
+      echo "Database truncated!"
+    else
+      echo "Database doesn't exist."
+    fi
+  fi
+else
+  echo "Please specify a database name."
+fi
