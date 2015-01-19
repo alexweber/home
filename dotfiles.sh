@@ -5,8 +5,13 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
+  # Copy the ".bash/private" file only if they don't already exist.
+  if [ ! -f ~/.bash/private ]; then
+    cp .bash/private ~/.bash/private
+  fi
+
   rsync --exclude ".git/" --exclude "home.sh"  --exclude "dotfiles.sh" \
-  --exclude "brew.sh"  --exclude "cask.sh"  --exclude "osx.sh" \
+  --exclude "brew.sh"  --exclude "cask.sh"  --exclude "osx.sh" --exclude ".bash/private" \
   --exclude "README.md" --exclude "LICENSE"  --exclude "COPYING" -avh --no-perms . ~;
   source ~/.bash_profile;
 }
