@@ -6,17 +6,18 @@ These are my dotfiles. There are many like them, but these ones are mine.
 
 To install, clone this repo and run the script:
 
-`git clone https://github.com/alexweber/home.git && home/install.sh`
+`git clone https://github.com/alexweber/home.git && home/dotfiles.sh`
 
-To update, go the directory where you cloned the repo and run the script:
+To update, go the directory where you cloned the repo and run the same script:
 
-`git pull && ./install.sh`
+`git pull && ./dotfiles.sh`
 
 ## Additional scripts
 
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `brew.sh` Install command-line tools using Homebrew
 * `cask.sh` Install native OS X apps using Homebrew Cask
+* `home.sh` Wrapper around the all of the other scripts; use this to set up a new Mac
 
 ## Credits
 

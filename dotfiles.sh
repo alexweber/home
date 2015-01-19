@@ -1,23 +1,23 @@
 #!/usr/bin/env bash
 
-# Ask for the administrator password upfront.
-sudo -v
+cd "$(dirname "${BASH_SOURCE}")";
 
-# Keep-alive: update existing `sudo` timestamp until we're done.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+git pull origin master;
 
-# Install homebrew.
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+function doIt() {
+  rsync --exclude ".git/" --exclude "home.sh"  --exclude "dotfiles.sh" \
+  --exclude "brew.sh"  --exclude "cask.sh"  --exclude "osx.sh" \
+  --exclude "README.md" --exclude "LICENSE"  --exclude "COPYING" -avh --no-perms . ~;
+  source ~/.bash_profile;
+}
 
-# Install homebrew packages.
-source brew.sh
-
-# Install homebrew casks.
-source cask.sh
-
-# Install Bash 4.
-echo "/usr/local/bin/bash" | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/bash
-
-# Setup OSX.
-source osx.sh
+if [ "$1" == "--force" -o "$1" == "-f" ]; then
+  doIt;
+else
+  read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+  echo "";
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    doIt;
+  fi;
+fi;
+unset doIt;
