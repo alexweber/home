@@ -103,7 +103,7 @@ alias photoshop='open -a "Adobe Photoshop CS6"'
 alias corsdev="open -n -a /opt/homebrew-cask/Caskroom/google-chrome-canary/latest/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --disable-web-security"
 
 # Create a new MySQL database.
-alias mc="mysql-create.sh"
+alias mc="mysql-create"
 
 ### DRUPAL STUFF ###
 # @TODO clean this up! :)
