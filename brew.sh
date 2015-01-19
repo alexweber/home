@@ -40,6 +40,7 @@ brew install homebrew/dupes/screen
 
 # Install other useful binaries.
 brew install ack
+brew install android-sdk
 brew install autoconf
 brew install automake
 brew install bfg
