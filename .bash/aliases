@@ -34,13 +34,12 @@ alias hosts='sudo $EDITOR /etc/hosts'
 # List only directories
 alias lsd="ls -lF | grep --color=never '^d'"
 
-# Always use colour output for "ls".
-# @TODO function to check os? or get rid of if entirely and go all mac?
-if [[ "$OSTYPE" =~ ^darwin ]]; then
-  alias ls='command ls -G';
-else
-  alias ls='command ls --color=auto';
-fi;
+# Detect which `ls` flavor is in use and use colored output.
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+  colorflag="--color"
+else # OS X `ls`
+  colorflag="-G"
+fi
 
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
