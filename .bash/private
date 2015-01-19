@@ -3,4 +3,22 @@
 # Private bash configuration.
 #
 # Use this file to store private configuration required by some of the other
-# scripts. DO NOT put this under version control in a public repo! :)
+# scripts. Once you modify it, run `git update-index --assume-unchanged` on it
+# in order to keep your private info from getting comitted by mistake!
+
+# Computer name.
+COMPUTERNAME="Macbook"
+
+# Git author.
+GIT_AUTHOR_NAME="Your Name"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+
+# Git email.
+GIT_AUTHOR_EMAIL="email@example"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+# MySQL.
+MYSQL_ROOT_USER="foo"
+MYSQL_ROOT_PASS="bar"
