@@ -11,7 +11,9 @@ These are my dotfiles. There are many like them, but these ones are mine.
 
 ## Customization
 
-In order to keep private info from public repos, use the `.bash/private` file; edit it and then run `git update-index --assume-unchanged private` in order to ignore the file's changes.
+* In order to keep private info from public repos, use the `.bash/private` file;
+* This file is only copied by the `dotfiles.sh` script if it doesn't already exist
+* If you're maintaining a fork, run `git update-index --assume-unchanged` on it in order to ignore the file's changes
 
 ## Additional scripts
 
