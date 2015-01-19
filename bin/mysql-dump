@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# First param is database name.
+DBNAME=$1
+
+# Second (optional) param is destination file name.
+DEST=$2
+
+# MYSQL_ROOT_USER and MYSQL_ROOT_PASS are defined in the "private" include.
+source "$HOME/.bash/private"
+
+if [ -n "$DBNAME" ]; then
+  read -p "Dump database: $DBNAME? (y/n) " RESP
+
+  if [ -n "$DEST" ]; then
+    DEST=$DBNAME
+  fi
+
+  if [ "$RESP" = "y" ]; then
+    DBEXISTS=$(mysql -u$MYSQL_ROOT_USER -p"$MYSQL_ROOT_PASS" --batch --skip-column-names -e "SHOW DATABASES LIKE '"$DBNAME"';" | grep "$DBNAME" > /dev/null; echo "$?");
+
+    if [ $DBEXISTS -eq 0 ];then
+      mysqldump -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS $DBNAME | gzip > "$DEST.sql.gz"
+      echo "Database dumped to $DEST!"
+    else
+      echo "Database doesn't exist."
+    fi
+  fi
+else
+  echo "Please specify a database name."
+fi
