@@ -3,31 +3,15 @@
 # @TODO add argument for drupal version
 # @TODO symlink certain local module repos (ie: examples for d8)
 
-# Configuration.
-
-BASEDIR='/Users/alex/www/'
-
-WWW_PREFIX='d7-' # Safe to leave blank.
-DB_PREFIX='drupal_7_' # Safe to leave blank.
-
-MYSQL_ROOT_USER='drupal'
-MYSQL_ROOT_PASS='drupal123'
-
-MYSQL_DRUPAL_USER='drupal'
-MYSQL_DRUPAL_PASS='drupal123'
-
-DRUPAL_ADMIN_USER='admin'
-DRUPAL_ADMIN_PASS='admin'
-DRUPAL_ADMIN_EMAIL='admin@example'
-
-# End configuration.
+# Configuration vars defined in the "private" include.
+source "$HOME/.bash/private"
 
 if [ -n "$1" ]; then
-
-  SANDBOX="$WWW_PREFIX$1.dev"
+  # Directory name.
+  SANDBOX="$SANDBOX_WWW_PREFIX$1.dev"
 
   # Create database.
-  DBNAME="$DB_PREFIX$1"
+  DBNAME="$SANDBOX_DB_PREFIX$1"
   mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -e "CREATE DATABASE IF NOT EXISTS \`$DBNAME\` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;"
 
   # Create hosts entry (leave it to MAMP)
@@ -37,14 +21,14 @@ if [ -n "$1" ]; then
 
   # Download Drupal.
   echo "Downloading Drupal..."
-  cd $BASEDIR
+  cd $SANDBOX_BASEDIR
   drush dl drupal --drupal-project-rename=$SANDBOX
 
   echo "Installing Drupal..."
   cd $SANDBOX
 
   # Install site using Drush.
-  drush si standard --db-url=mysql://$MYSQL_DRUPAL_USER:$MYSQL_DRUPAL_PASS@localhost/$DBNAME --account-name="$DRUPAL_ADMIN_USER" --account-pass="$DRUPAL_ADMIN_PASS" --account-mail="$DRUPAL_ADMIN_EMAIL" --site-name="$SANDBOX"
+  drush si standard --db-url=mysql://$SANDBOX_MYSQL_USER:$SANDBOX_MYSQL_PASS@localhost/$DBNAME --account-name="$SANDBOX_ADMIN_USER" --account-pass="$SANDBOX_ADMIN_PASS" --account-mail="$SANDBOX_ADMIN_EMAIL" --site-name="$SANDBOX"
 
   # Create directories.
   mkdir sites/all/modules/contrib
@@ -94,7 +78,7 @@ if [ -n "$1" ]; then
   drush -l $SANDBOX sql-query "UPDATE block SET status = 0 WHERE delta = 'powered-by'"
   drush -l $SANDBOX sql-query "UPDATE block SET status = 0 WHERE delta = 'navigation'"
 
-  # Fix RewriteBase in .htaccess. This is really specific to my use case.
+  # Fix RewriteBase in .htaccess. This is useful when using automatic VHosts.
   #wget https://raw.github.com/alexweber/Taz/profile/patches/htaccess-rewrite-base.patch
   #patch -p1 < htaccess-rewrite-base.patch
   #rm -rf htaccess-rewrite-base.patch
