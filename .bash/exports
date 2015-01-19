@@ -15,6 +15,10 @@ paths_to_add=(
   /usr/{,s}bin
   # X binaries.
   /usr/X11/bin
+  # Android SK
+  ${JAVA_HOME}/bin:$PATH
+  /Applications/Android\ Studio.app/sdk/platform-tools
+  /Applications/Android\ Studio.app/sdk/tools
 );
 
 # Create an array of directories currently in the PATH variable.
@@ -56,6 +60,10 @@ unset method;
 
 # Use Sublime Text as default editor.
 export EDITOR='subl';
+
+# Android Dev
+export JAVA_HOME=$(/usr/libexec/java_home)
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # Make less the default pager, and specify some useful defaults.
 less_options=(
