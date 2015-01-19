@@ -4,13 +4,10 @@ These are my dotfiles. There are many like them, but these ones are mine.
 
 ## Usage
 
-To install, clone this repo and run the script:
-
-`git clone https://github.com/alexweber/home.git && home/dotfiles.sh`
-
-To update, go the directory where you cloned the repo and run the same script:
-
-`git pull && ./dotfiles.sh`
+* Clone this repo somewhere: `git clone https://github.com/alexweber/home.git ~/Projects/home`
+* To install on an existing machine, run `./dotfiles.sh`
+* To install on a new machine, run `./home.sh`
+* To update either installation, go run `git pull && ./dotfiles.sh`
 
 ## Additional scripts
 
@@ -18,6 +15,9 @@ To update, go the directory where you cloned the repo and run the same script:
 * `brew.sh` Install command-line tools using Homebrew
 * `cask.sh` Install native OS X apps using Homebrew Cask
 * `home.sh` Wrapper around the all of the other scripts; use this to set up a new Mac
+
+## Caveats
+* `osx.sh` assumes you have some executables from `brew.sh` and `cask.sh` installed
 
 ## Credits
 
