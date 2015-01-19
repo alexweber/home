@@ -12,6 +12,15 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# I <3 u cask.
+alias cask='brew cask'
+
+# Be nice!
+alias please=sudo
+
+# Shortcut to edit hosts file.
+alias hosts='sudo $EDITOR /etc/hosts'
+
 # Confirm before overwriting
 # I know it is bad practice to override the default commands, but this is for
 # my own safety. If you really want the original "instakill" versions, you can
