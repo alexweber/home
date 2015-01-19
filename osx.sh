@@ -43,7 +43,7 @@ defaults write com.apple.systemuiserver menuExtras -array \
 defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
 
 # Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
@@ -346,8 +346,8 @@ Privileges -bool true
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
-# Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+# Set the icon size of Dock items to 40 pixels
+defaults write com.apple.dock tilesize -int 40
 
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
