@@ -1,0 +1,34 @@
+"*":
+  welcome:
+    showOnStartup: false
+  core:
+    followSymlinks: true
+    disabledPackages: [
+      "language-ruby"
+      "language-ruby-on-rails"
+      "language-python"
+      "language-perl"
+      "language-objective-c"
+      "language-less"
+      "language-java"
+      "language-go"
+      "language-clojure"
+      "language-c"
+      "language-toml"
+      "open-on-github"
+      "spell-check"
+      "styleguide"
+      "welcome"
+      "archive-view"
+    ]
+    themes: [
+      "seti-ui"
+      "monokai"
+    ]
+    projectHome: "~/Projects"
+    audioBeep: false
+  "atom-ctags":
+    autoBuildTagsWhenActive: true
+  linter: {}
+  editor:
+    invisibles: {}
