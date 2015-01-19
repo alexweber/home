@@ -7,17 +7,12 @@ DBNAME=$1
 source "$HOME/.bash/private"
 
 if [ -n "$DBNAME" ]; then
-  read -p "Delete database: $DBNAME? (y/n) " RESP
+  DBEXISTS=$(mysql -u$MYSQL_ROOT_USER -p"$MYSQL_ROOT_PASS" --batch --skip-column-names -e "SHOW DATABASES LIKE '"$DBNAME"';" | grep "$DBNAME" > /dev/null; echo "$?");
 
-  if [ "$RESP" = "y" ]; then
-    DBEXISTS=$(mysql -u$MYSQL_ROOT_USER -p"$MYSQL_ROOT_PASS" --batch --skip-column-names -e "SHOW DATABASES LIKE '"$DBNAME"';" | grep "$DBNAME" > /dev/null; echo "$?");
-
-    if [ $DBEXISTS -eq 0 ];then
-      mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -Nse "DROP DATABASE '$DBNAME';"
-      echo "Database deleted!"
-    else
-      echo "Database doesn't exist."
-    fi
+  if [ $DBEXISTS -eq 0 ];then
+    mysqladmin -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS drop $DBNAME
+  else
+    echo "Database doesn't exist."
   fi
 else
   echo "Please specify a database name."
