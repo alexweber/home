@@ -14,7 +14,9 @@ function doIt() {
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   doIt;
 else
-  read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+  # Removed the '-n' flag to accept a single char without requiring "Enter" to
+  # be pressed because I don't care much for it.
+  read -p "This will overwrite existing files in your home directory. Are you sure? (y/n) ";
   echo "";
   if [[ $REPLY =~ ^[Yy]$ ]]; then
     doIt;
