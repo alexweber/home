@@ -105,6 +105,9 @@ alias corsdev="open -n -a /opt/homebrew-cask/Caskroom/google-chrome-canary/lates
 # Create a new MySQL database.
 alias mc="mysql-create"
 
+# Truncate a MySQL database.
+alias mr="mysql-reset"
+
 ### DRUPAL STUFF ###
 # @TODO clean this up! :)
 
