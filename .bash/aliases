@@ -26,7 +26,7 @@ alias .....="cd ../../../.."
 alias lsd="ls -lF | grep --color=never '^d'"
 
 # Always use colour output for "ls".
-# @TODO creation in functions? or get rid of if entirely and go all mac?
+# @TODO function to check os? or get rid of if entirely and go all mac?
 if [[ "$OSTYPE" =~ ^darwin ]]; then
   alias ls='command ls -G';
 else
