@@ -20,12 +20,14 @@ These are my dotfiles. There are many like them, but these ones are mine.
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `brew.sh` Install command-line tools using Homebrew
 * `cask.sh` Install native OS X apps using Homebrew Cask
-* `home.sh` Wrapper around the all of the other scripts; use this to set up a new Mac
 * `node.sh` Install Node.js packages globally
+* `atom.sh` Install Atom Editor packages
+* `home.sh` __Wrapper around the all of the other scripts; use this to set up a new Mac__
 
 ## Caveats
 * `osx.sh` assumes you have some executables from `brew.sh` and `cask.sh` installed
 * `node.sh` assumes you have Node installed
+* `atom.sh` assumes you have Atom installed
 
 ## Credits
 

@@ -707,23 +707,6 @@ curl -o ~/Library/Application\ Support/Sublime\ Text*/Installed\ Packages/Packag
 git clone git@github.com:alek-sys/sublimetext_indentxml.git  ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Indent\ XML
 
 ###############################################################################
-# Atom Editor                                                                 #
-###############################################################################
-
-# Install plugins
-# @TODO move this to its own script?
-apm install autocomplete-plus
-apm install color-picker
-apm install dash
-apm install isotope-ui
-apm install linter
-apm install minimap
-apm install monokai
-apm install seti-syntax
-apm install seti-ui
-apm install todo-show
-
-###############################################################################
 # Transmission.app                                                            #
 ###############################################################################
 
