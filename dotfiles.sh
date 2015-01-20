@@ -10,8 +10,7 @@ function doIt() {
     cp .bash/private ~/.bash/private
   fi
 
-  rsync --exclude ".git/" --exclude "home.sh"  --exclude "dotfiles.sh" \
-  --exclude "brew.sh"  --exclude "cask.sh"  --exclude "osx.sh" --exclude ".bash/private" \
+  rsync --exclude ".git/" --exclude "scripts/"  --exclude "docs/" --exclude ".bash/private" \
   --exclude "README.md" --exclude "LICENSE"  --exclude "COPYING" -avh --no-perms . ~;
   source ~/.bash_profile;
 }
