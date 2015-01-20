@@ -9,20 +9,29 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Setup dotfiles.
 source dotfiles.sh
 
-# Install homebrew.
+# Install Homebrew.
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Install homebrew packages.
+# Install Homebrew packages.
 source brew.sh
-
-# Install homebrew casks.
-source cask.sh
 
 # Install Bash 4.
 BASHPATH=$(brew --prefix)/bin/bash
 echo $BASHPATH | sudo tee -a /etc/shells
 chsh -s $BASHPATH
 echo $BASH_VERSION # should be 4.x not the old 3.2.X
+
+# Install Homebrew Casks.
+source cask.sh
+
+# Install Mode modules.
+source node.sh
+
+# Install Composer packages.
+source composer.sh
+
+# Install Atom plugins.
+source node.sh
 
 # Setup OSX.
 source osx.sh
