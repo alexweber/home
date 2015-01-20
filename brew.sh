@@ -59,7 +59,7 @@ brew install git
 brew install hub
 brew install libpng
 brew install libsass
-# brew install phantomjs
+brew install phantomjs
 brew install homebrew/php/PHP53
 brew install homebrew/php/php-cs-fixer
 brew install qcachegrind
