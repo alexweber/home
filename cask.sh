@@ -33,6 +33,7 @@ brew cask install cocoarestclient
 brew cask install dosbox
 brew cask install dropbox
 brew cask install firefox
+brew cask install flash-player
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install harvest
@@ -55,6 +56,7 @@ brew cask install moom
 brew cask install multidoge
 # brew cask install mysqlworkbench
 brew cask install onepassword
+brew cask install paragon-ntfs
 brew cask install phpstorm
 # brew cask install screenflow
 brew cask install sequel-pro
