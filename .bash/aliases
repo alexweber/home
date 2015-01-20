@@ -109,7 +109,6 @@ alias mc="mysql-create"
 alias mr="mysql-reset"
 
 ### DRUPAL STUFF ###
-# @TODO clean this up! :)
 
 # Drush uninstall.
 alias dun="drush pm-uninstall"
@@ -136,5 +135,4 @@ alias d8='DRUSH_PHP=/Applications/MAMP/bin/php/php5.4.33/bin/php ~/Projects/drup
 alias php54='/Applications/MAMP/bin/php/php5.4.33/bin/php'
 
 # @TODO drush autocomplete!
-# @TODO setup pear stuff
 # @TODO cleanup Drupal 7 vs 8 stuff (var for php minor versions to sub in multiple places seamlessly?)
