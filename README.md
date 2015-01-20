@@ -29,6 +29,7 @@ In the "scripts" folder:
 
 ## Caveats
 * `osx.sh` assumes you have some executables from `brew.sh` and `cask.sh` installed
+* Refer to the "docs" folder for more info
 
 ## Credits
 
