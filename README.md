@@ -7,7 +7,7 @@ These are my dotfiles. There are many like them, but these ones are mine.
 * Clone this repo somewhere: `git clone https://github.com/alexweber/home.git ~/Projects/home`
 * To install run `./dotfiles.sh`
 * To update the dotfiles run `git pull && ./dotfiles.sh`
-* Alternatively, if you're setting up a fresh OS X install, use the `home.sh` script, which will set everything up and run all of the other scripts for you
+* Alternatively, if you're setting up a fresh OS X install, use the `scripts/home.sh` script, which will set everything up and run all of the other scripts for you
 
 ## Customization
 
@@ -16,6 +16,8 @@ These are my dotfiles. There are many like them, but these ones are mine.
 * If you're maintaining a fork, run `git update-index --assume-unchanged` on this file in order to ignore the it's changes
 
 ## Additional scripts
+
+In the "scripts" folder:
 
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `brew.sh` Install command-line tools using Homebrew
