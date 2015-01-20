@@ -21,9 +21,11 @@ These are my dotfiles. There are many like them, but these ones are mine.
 * `brew.sh` Install command-line tools using Homebrew
 * `cask.sh` Install native OS X apps using Homebrew Cask
 * `home.sh` Wrapper around the all of the other scripts; use this to set up a new Mac
+* `node.sh` Install Node.js packages globally
 
 ## Caveats
 * `osx.sh` assumes you have some executables from `brew.sh` and `cask.sh` installed
+* `node.sh` assumes you have Node installed
 
 ## Credits
 
