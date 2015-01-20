@@ -10,13 +10,15 @@ paths_to_add=(
   /usr/local/{,s}bin
   # Prefer updated GNU core utilities over default OSX ones.
   /usr/local/opt/coreutils/libexec/gnubin
-  # MAMP.
-  /Applications/MAMP/Library/bin
   # System.
   /{,s}bin
   /usr/{,s}bin
   # X binaries.
   /usr/X11/bin
+  # MAMP.
+  /Applications/MAMP/Library/bin
+  # Composer.
+  "$HOME/.composer/vendor/bin"
   # Android SK
   ${JAVA_HOME}/bin:$PATH
   /Applications/Android\ Studio.app/sdk/platform-tools
