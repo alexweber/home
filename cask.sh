@@ -52,7 +52,7 @@ brew cask install linkinus
 brew cask install minco
 brew cask install mmex
 brew cask install moom
-# brew cask install multidoge
+brew cask install multidoge
 # brew cask install mysqlworkbench
 brew cask install onepassword
 brew cask install phpstorm
