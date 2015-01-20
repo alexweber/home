@@ -134,5 +134,4 @@ alias d8='DRUSH_PHP=/Applications/MAMP/bin/php/php5.4.33/bin/php ~/Projects/drup
 # PHP 5.4 for Drupal 8 in the command line.
 alias php54='/Applications/MAMP/bin/php/php5.4.33/bin/php'
 
-# @TODO drush autocomplete!
 # @TODO cleanup Drupal 7 vs 8 stuff (var for php minor versions to sub in multiple places seamlessly?)
