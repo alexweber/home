@@ -16,7 +16,10 @@ brew upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated).
 brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+
+if ! [[ -L "/usr/local/bin/sha256sum" && -f "/usr/local/bin/sha256sum" ]]; then
+  sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+fi
 
 # Install some other useful utilities like `sponge`.
 #brew install moreutils
