@@ -27,6 +27,9 @@ source cask.sh
 # Install Mode modules.
 source node.sh
 
+# Install Ruby gems.
+source ruby.sh
+
 # Install Composer packages.
 source composer.sh
 
