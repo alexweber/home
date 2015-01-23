@@ -11,3 +11,9 @@ __MACOSX
 
 # SASS cache.
 .sass-cache
+
+# Drush cache.
+.drush/cache
+
+# Atom packages.
+.atom/packages
