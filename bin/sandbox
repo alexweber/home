@@ -1,87 +1,95 @@
 #!/usr/bin/env bash
 
-# @TODO add argument for drupal version
 # @TODO symlink certain local module repos (ie: examples for d8)
 
 # Configuration vars defined in the "private" include.
 source "$HOME/.bash/private"
 
-if [ -n "$1" ]; then
-  # Directory name.
-  SANDBOX="$SANDBOX_WWW_PREFIX$1.dev"
+# First param is sandbox name.
+SBNAME=$SBNAME
 
-  # Create database.
-  DBNAME="$SANDBOX_DB_PREFIX$1"
-  mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -e "CREATE DATABASE IF NOT EXISTS \`$DBNAME\` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;"
+if [ -n "$SBNAME" ]; then
+  read -p "Select Drupal version: (7/8) " RESP
 
-  # Create hosts entry (leave it to MAMP)
-  #echo "127.0.0.1 $SANDBOX # Automagically created by sandbox.sh" | sudo tee -a /etc/hosts
-  #sudo sh -c "echo '127.0.0.1 $SANDBOX # automagically created by sandbox.sh' >> /etc/hosts"
-  # echo "127.0.0.1 $SANDBOX # automagically created by sandbox.sh" >> /etc/hosts
+  if [ "$RESP" = "7" ]; then
+    # Directory name.
+    SANDBOX="$SANDBOX_WWW_PREFIX$SBNAME.dev"
 
-  # Download Drupal.
-  echo "Downloading Drupal..."
-  cd $SANDBOX_BASEDIR
-  drush dl drupal --drupal-project-rename=$SANDBOX
+    # Create database.
+    DBNAME="$SANDBOX_DB_PREFIX$SBNAME"
+    mysql -u$MYSQL_ROOT_USER -p$MYSQL_ROOT_PASS -e "CREATE DATABASE IF NOT EXISTS \`$DBNAME\` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;"
 
-  echo "Installing Drupal..."
-  cd $SANDBOX
+    # Create hosts entry (leave it to MAMP)
+    #echo "127.0.0.1 $SANDBOX # Automagically created by sandbox.sh" | sudo tee -a /etc/hosts
+    #sudo sh -c "echo '127.0.0.1 $SANDBOX # automagically created by sandbox.sh' >> /etc/hosts"
+    # echo "127.0.0.1 $SANDBOX # automagically created by sandbox.sh" >> /etc/hosts
 
-  # Install site using Drush.
-  drush si standard --db-url=mysql://$SANDBOX_MYSQL_USER:$SANDBOX_MYSQL_PASS@localhost/$DBNAME --account-name="$SANDBOX_ADMIN_USER" --account-pass="$SANDBOX_ADMIN_PASS" --account-mail="$SANDBOX_ADMIN_EMAIL" --site-name="$SANDBOX"
+    # Download Drupal.
+    echo "Downloading Drupal..."
+    cd $SANDBOX_BASEDIR
+    drush dl drupal --drupal-project-rename=$SANDBOX
 
-  # Create directories.
-  mkdir sites/all/modules/contrib
-  mkdir sites/all/modules/custom
-  mkdir sites/all/themes/contrib
-  mkdir sites/all/themes/custom
-  mkdir -p sites/default/files/private
+    echo "Installing Drupal..."
+    cd $SANDBOX
 
-  # Set permissions.
-  sudo chmod -R 777 sites/default/files
+    # Install site using Drush.
+    drush si standard --db-url=mysql://$SANDBOX_MYSQL_USER:$SANDBOX_MYSQL_PASS@localhost/$DBNAME --account-name="$SANDBOX_ADMIN_USER" --account-pass="$SANDBOX_ADMIN_PASS" --account-mail="$SANDBOX_ADMIN_EMAIL" --site-name="$SANDBOX"
 
-  # Download better admin theme.
-  drush -l $SANDBOX dl shiny
+    # Create directories.
+    mkdir sites/all/modules/contrib
+    mkdir sites/all/modules/custom
+    mkdir sites/all/themes/contrib
+    mkdir sites/all/themes/custom
+    mkdir -p sites/default/files/private
 
-  # Download and enable some standard contrib modules.
-  drush -l $SANDBOX dl admin_menu devel views ctools context features date entity jquery_update token transliteration module_filter variable entity entityreference views_bulk_operations
-  drush -l $SANDBOX en admin_menu_toolbar devel module_filter jquery_update shiny views_ui ctools features -y
+    # Set permissions.
+    sudo chmod -R 777 sites/default/files
 
-  # Disable and uninstall some core modules
-  drush -l $SANDBOX dis overlay color comment shortcut toolbar dashboard search rdf update dblog -y
-  drush -l $SANDBOX pm-uninstall overlay color comment shortcut toolbar dashboard search rdf update dblog -y
+    # Download better admin theme.
+    drush -l $SANDBOX dl shiny
 
-  # Disable some core themes.
-  drush -l $SANDBOX dis seven -y
+    # Download and enable some standard contrib modules.
+    drush -l $SANDBOX dl admin_menu devel views ctools context features date entity jquery_update token transliteration module_filter variable entity entityreference views_bulk_operations
+    drush -l $SANDBOX en admin_menu_toolbar devel module_filter jquery_update shiny views_ui ctools features -y
 
-  # Set some variables.
-  drush -l $SANDBOX vset --yes admin_theme 'shiny'
-  drush -l $SANDBOX vset --yes admin_menu_cache_client 0
-  drush -l $SANDBOX vset --yes --format=json admin_menu_components '{"admin_menu.icon":1,"admin_menu.menu":1,"admin_menu.account":1,"shortcut.links":0,"admin_menu.search":0,"admin_menu.users":0}'
-  drush -l $SANDBOX vset --yes features_rebuild_on_flush 0
-  drush -l $SANDBOX vset --yes features_lock_mode 'rebuild'
-  drush -l $SANDBOX vset --yes features_default_export_path 'sites/all/modules/custom'
-  drush -l $SANDBOX vset --yes file_private_path 'sites/default/files/private'
-  drush -l $SANDBOX vset --yes jquery_update_jquery_version '1.7'
-  drush -l $SANDBOX vset --yes module_filter_dynamic_save_position 0
-  drush -l $SANDBOX vset --yes module_filter_recent_modules 0
-  drush -l $SANDBOX vset --yes module_filter_use_switch 0
-  drush -l $SANDBOX vset --yes views_ui_always_live_preview 0
-  drush -l $SANDBOX vset --yes views_ui_show_advanced_help_warning 0
-  drush -l $SANDBOX vset --yes views_ui_show_listing_filters 1
-  drush -l $SANDBOX vset --yes views_ui_show_master_display 1
-  drush -l $SANDBOX vset --yes views_ui_show_advanced_column 1
-  drush -l $SANDBOX vset --yes views_ui_show_sql_query 1
-  drush -l $SANDBOX vset --yes user_register 0
+    # Disable and uninstall some core modules
+    drush -l $SANDBOX dis overlay color comment shortcut toolbar dashboard search rdf update dblog -y
+    drush -l $SANDBOX pm-uninstall overlay color comment shortcut toolbar dashboard search rdf update dblog -y
 
-  # Disable some annoying default blocks.
-  drush -l $SANDBOX sql-query "UPDATE block SET status = 0 WHERE delta = 'powered-by'"
-  drush -l $SANDBOX sql-query "UPDATE block SET status = 0 WHERE delta = 'navigation'"
+    # Disable some core themes.
+    drush -l $SANDBOX dis seven -y
 
-  # Fix RewriteBase in .htaccess. This is useful when using automatic VHosts.
-  #wget https://raw.github.com/alexweber/Taz/profile/patches/htaccess-rewrite-base.patch
-  #patch -p1 < htaccess-rewrite-base.patch
-  #rm -rf htaccess-rewrite-base.patch
+    # Set some variables.
+    drush -l $SANDBOX vset --yes admin_theme 'shiny'
+    drush -l $SANDBOX vset --yes admin_menu_cache_client 0
+    drush -l $SANDBOX vset --yes --format=json admin_menu_components '{"admin_menu.icon":1,"admin_menu.menu":1,"admin_menu.account":1,"shortcut.links":0,"admin_menu.search":0,"admin_menu.users":0}'
+    drush -l $SANDBOX vset --yes features_rebuild_on_flush 0
+    drush -l $SANDBOX vset --yes features_lock_mode 'rebuild'
+    drush -l $SANDBOX vset --yes features_default_export_path 'sites/all/modules/custom'
+    drush -l $SANDBOX vset --yes file_private_path 'sites/default/files/private'
+    drush -l $SANDBOX vset --yes jquery_update_jquery_version '1.7'
+    drush -l $SANDBOX vset --yes module_filter_dynamic_save_position 0
+    drush -l $SANDBOX vset --yes module_filter_recent_modules 0
+    drush -l $SANDBOX vset --yes module_filter_use_switch 0
+    drush -l $SANDBOX vset --yes views_ui_always_live_preview 0
+    drush -l $SANDBOX vset --yes views_ui_show_advanced_help_warning 0
+    drush -l $SANDBOX vset --yes views_ui_show_listing_filters 1
+    drush -l $SANDBOX vset --yes views_ui_show_master_display 1
+    drush -l $SANDBOX vset --yes views_ui_show_advanced_column 1
+    drush -l $SANDBOX vset --yes views_ui_show_sql_query 1
+    drush -l $SANDBOX vset --yes user_register 0
 
-  open `drush user-login "admin" -l $SANDBOX:8888`
+    # Disable some annoying default blocks.
+    drush -l $SANDBOX sql-query "UPDATE block SET status = 0 WHERE delta = 'powered-by'"
+    drush -l $SANDBOX sql-query "UPDATE block SET status = 0 WHERE delta = 'navigation'"
+
+    # Fix RewriteBase in .htaccess. This is useful when using automatic VHosts.
+    #wget https://raw.github.com/alexweber/Taz/profile/patches/htaccess-rewrite-base.patch
+    #patch -p1 < htaccess-rewrite-base.patch
+    #rm -rf htaccess-rewrite-base.patch
+
+    open `drush user-login "admin" -l $SANDBOX:8888`
+  elif [ "$RESP" = "8" ]; then
+    
+  fi
 fi
