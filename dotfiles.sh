@@ -5,7 +5,7 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-  # Copy the ".bash/private" file only if they don't already exist.
+  # Copy the ".bash/private" file only if it doesn't already exist.
   if [ ! -f ~/.bash/private ]; then
     cp .bash/private ~/.bash/private
   fi
@@ -18,7 +18,7 @@ function doIt() {
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   doIt;
 else
-  # Removed the '-n' flag to accept a single char without requiring "Enter" to
+  # Removed the '-n 1' flag to accept a single char without requiring "Enter" to
   # be pressed because I don't care much for it.
   read -p "This will overwrite existing files in your home directory. Are you sure? (y/n) ";
   echo "";
