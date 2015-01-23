@@ -93,6 +93,9 @@
   # Status.
   st = status
 
+  # Checkout.
+  co = checkout
+
   # Switch to a branch, creating it if necessary.
   go = checkout -B
 
