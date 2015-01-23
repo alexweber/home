@@ -32,3 +32,5 @@
   linter: {}
   editor:
     invisibles: {}
+  "autocomplete-plus": {}
+  minimap: {}
