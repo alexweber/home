@@ -63,7 +63,7 @@ brew cask install screenflow
 brew cask install sequel-pro
 brew cask install skype
 brew cask install smcfancontrol
-brew cask install sparrow
+# brew cask install sparrow
 # brew cask install steam
 brew cask install sublime-text
 brew cask install torbrowser
