@@ -74,6 +74,9 @@ brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
 
+# Install custom Casks.
+brew cask install "~/.init/popcorn-time.rb"
+
 # Remove outdated versions from the cellar.
 brew cleanup
 brew cask cleanup
