@@ -108,6 +108,9 @@ alias mc="mysql-create"
 # Truncate a MySQL database.
 alias mr="mysql-reset"
 
+# Start Mailcatcher ("catch mail").
+alias cm="mailcatcher --smtp-port 30000"
+
 ### DRUPAL STUFF ###
 
 # Drush uninstall.
