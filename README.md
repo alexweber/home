@@ -31,7 +31,11 @@ In the "scripts" folder:
 
 ## Caveats
 * `osx.sh` assumes you have some executables from `brew.sh` and `cask.sh` installed
-* Refer to the "docs" folder for more info
+
+## Help
+
+* [Bash Alias cheat sheet](BASH.md)
+* [Git Alias cheat sheet](GIT.md)
 
 ## Credits
 
