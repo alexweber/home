@@ -58,6 +58,7 @@ brew cask install multidoge
 brew cask install onepassword
 brew cask install paragon-ntfs
 brew cask install phpstorm
+brew cask install pongsaver
 # brew cask install screenflow
 brew cask install sequel-pro
 brew cask install skype
