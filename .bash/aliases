@@ -6,6 +6,9 @@
 # command word following the alias is also checked for alias expansion."
 alias sudo='sudo ';
 
+# Be nice!
+alias please=sudo
+
 # Easier folder navigation.
 alias ..="cd .."
 alias ...="cd ../.."
@@ -14,9 +17,6 @@ alias .....="cd ../../../.."
 
 # I <3 u cask.
 alias cask='brew cask'
-
-# Be nice!
-alias please=sudo
 
 # Shortcut to edit hosts file.
 alias hosts='sudo $EDITOR /etc/hosts'
@@ -57,8 +57,6 @@ alias lsd='ls -l | grep "^d"'
 # Git.
 alias g="git"
 alias h="history"
-
-# Undo a Git push.
 alias undopush="git push -f origin HEAD^:master"
 
 # Stopwatch
@@ -71,10 +69,8 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 # What's my IP address.
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
-# OS X has no `md5sum`, so use `md5` as a fallback
+# OS X checksum fallbacks.
 command -v md5sum > /dev/null || alias md5sum="md5"
-
-# OS X has no `sha1sum`, so use `shasum` as a fallback
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
 # Empty the Trash on all mounted volumes and the main HDD. Also, clear Apple’s
