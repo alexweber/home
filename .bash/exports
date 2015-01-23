@@ -10,11 +10,6 @@ paths_to_add=(
   /usr/local/{,s}bin
   # Prefer updated GNU core utilities over default OSX ones.
   /usr/local/opt/coreutils/libexec/gnubin
-  # System.
-  /{,s}bin
-  /usr/{,s}bin
-  # X binaries.
-  /usr/X11/bin
   # MAMP.
   /Applications/MAMP/Library/bin
   # Composer.
@@ -23,6 +18,11 @@ paths_to_add=(
   ${JAVA_HOME}/bin:$PATH
   /Applications/Android\ Studio.app/sdk/platform-tools
   /Applications/Android\ Studio.app/sdk/tools
+  # System.
+  /{,s}bin
+  /usr/{,s}bin
+  # X binaries.
+  /usr/X11/bin
 );
 
 # Create an array of directories currently in the PATH variable.
