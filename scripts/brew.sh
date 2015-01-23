@@ -57,10 +57,14 @@ brew install dtrx
 brew install gettext
 brew install git
 brew install hub
+brew install icu4c
 brew install libpng
 brew install libsass
 brew install phantomjs
-brew install homebrew/php/PHP53
+brew install homebrew/php/php53-intl
+brew install homebrew/php/php53 --with-intl
+# brew install homebrew/php/php53-xdebug
+brew install homebrew/php/php53-xhprof
 brew install homebrew/php/php-cs-fixer
 brew install qcachegrind
 brew install rename
