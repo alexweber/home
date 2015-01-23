@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+SOURCE_DIR="$(cd "$(dirname "$0")" > /dev/null; pwd)";
+cd $SOURCE_DIR
 
 git pull origin master;
 
@@ -9,6 +10,21 @@ function doIt() {
   if [ ! -f ~/.bash/private ]; then
     cp .bash/private ~/.bash/private
   fi
+
+  # Symlink some config directories.
+  symlinked_dirs=(
+    .atom
+    .drush
+    .WebIde80
+  );
+  for symlinked_dir in "${symlinked_dirs[@]}"; do
+    if ! [[ -L "$HOME/$symlinked_dir" && -d "$HOME/$symlinked_dir" ]]; then
+      ln -s "$SOURCE_DIR/$symlinked_dir" "$HOME/$symlinked_dir"
+      echo "Create symlink from $symlinked_dir to $HOME/$symlinked_dir"
+    else
+      echo "Link for $symlinked_dir already exists"
+    fi
+  done;
 
   rsync --exclude ".git/" --exclude "scripts/"  --exclude "BASH.md" \
   --exclude ".bash/private" --exclude ".init/" --exclude "GIT.md" \
@@ -23,7 +39,6 @@ else
   # Removed the '-n 1' flag to accept a single char without requiring "Enter" to
   # be pressed because I don't care much for it.
   read -p "This will overwrite existing files in your home directory. Are you sure? (y/n) ";
-  echo "";
   if [[ $REPLY =~ ^[Yy]$ ]]; then
     doIt;
   fi;
