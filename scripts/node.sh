@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Install command-line tools using Node.
+# Install command-line tools globally using Node.
 
 # Ask for the administrator password upfront.
 sudo -v
