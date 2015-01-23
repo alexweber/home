@@ -29,10 +29,14 @@ brew install gnu-sed --with-default-names
 
 # Install Bash 4.
 brew install bash
+
+# Install Bash completion.
 #brew install bash-completion
 # Regular bash-completion package is held back to an older release, so we get
 # latest from versions:
 # github.com/Homebrew/homebrew/blob/master/Library/Formula/bash-completion.rb#L3-L4
+# Unlink the old one to be sure.
+brew uninstall bash-completion
 brew install homebrew/versions/bash-completion2
 
 # Install `wget` with IRI support.
