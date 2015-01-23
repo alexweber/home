@@ -26,10 +26,11 @@ function doIt() {
     fi
   done;
 
-  rsync --exclude ".git/" --exclude "scripts/"  --exclude "BASH.md" \
-  --exclude ".bash/private" --exclude ".init/" --exclude "GIT.md" \
-  --exclude ".atom" --exclude ".drush/" --exclude ".WebIde80" \
-  --exclude "README.md" --exclude "LICENSE"  --exclude "COPYING" -avh --no-perms . ~;
+  rsync --exclude ".atom/" --exclude ".bash/private" --exclude ".drush/" \
+  --exclude ".git/" --exclude "./WebIde80" --exclude "scripts/" \
+  --exclude "BASH.md" --exclude "COPYING" --exclude "dotfiles.sh" \
+  --exclude "GIT.md" --exclude "LICENSE" --exclude "README.md" \
+  -avh --no-perms . ~;
   source ~/.bash_profile;
 }
 
