@@ -26,6 +26,8 @@ brew cask install alfred
 brew cask install android-studio
 brew cask install atom
 brew cask install appzapper
+brew cask install battle-net
+brew cask install bettertouchtool
 brew cask install boom
 brew cask install ccleaner
 brew cask install cocoarestclient
@@ -36,6 +38,8 @@ brew cask install firefox
 brew cask install flash-player
 brew cask install google-chrome
 brew cask install google-chrome-canary
+# brew cask install google-drive
+# brew cask install google-earth
 brew cask install harvest
 brew cask install hipchat
 brew cask install imagealpha
@@ -57,6 +61,7 @@ brew cask install multidoge
 # brew cask install mysqlworkbench
 brew cask install onepassword
 brew cask install paragon-ntfs
+# brew cask install pref-setter
 brew cask install phpstorm
 brew cask install pongsaver
 brew cask install screenflow
@@ -74,6 +79,7 @@ brew cask install transmit
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
+brew cask install yandex
 
 # Install custom Casks.
 brew cask install "~/.init/popcorn-time.rb"
