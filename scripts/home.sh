@@ -36,6 +36,9 @@ source composer.sh
 # Install PHP extensions.
 source pecl.sh
 
+# Add PHP extensions to MAMP.
+source mamp.sh
+
 # Install Atom plugins.
 source node.sh
 

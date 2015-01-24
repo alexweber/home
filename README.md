@@ -19,7 +19,7 @@ These are my dotfiles. There are many like them, but these ones are mine.
 
 ## Additional scripts
 
-In the "scripts" folder:
+The following scripts are available in the "scripts" folder:
 
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `brew.sh` Install command-line tools using Homebrew
@@ -27,10 +27,9 @@ In the "scripts" folder:
 * `node.sh` Install Node.js packages globally
 * `composer.sh` Install Composer packages globally
 * `atom.sh` Install Atom Editor packages
+* `pecl.sh` Install PHP extensions
+* `mamp.sh` Add PHP extensions to MAMP
 * `home.sh` __Wrapper around the all of the other scripts; use this to set up a new Mac__
-
-## Caveats
-* `osx.sh` assumes you have some executables from `brew.sh` and `cask.sh` installed
 
 ## Help
 
