@@ -27,7 +27,7 @@ function doIt() {
   done;
 
   rsync --exclude ".atom/" --exclude ".bash/private" --exclude ".drush/" \
-  --exclude ".git/" --exclude "./WebIde80" --exclude "scripts/" \
+  --exclude ".git/" --exclude ".WebIde80/" --exclude "scripts/" \
   --exclude "BASH.md" --exclude "COPYING" --exclude "dotfiles.sh" \
   --exclude "GIT.md" --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;
