@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Shell prompt based on the Solarized Dark theme.
 # Screenshot: http://i.imgur.com/MTLif8c.jpg
 # Heavily inspired by @necolas’s prompt: https://github.com/necolas/dotfiles
