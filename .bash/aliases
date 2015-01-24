@@ -69,6 +69,9 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 # What's my IP address.
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
+# Enhanced WHOIS lookups.
+alias whois="whois -h whois.internic.net"
+
 # OS X checksum fallbacks.
 command -v md5sum > /dev/null || alias md5sum="md5"
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
