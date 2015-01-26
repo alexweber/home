@@ -3,6 +3,7 @@
 The following custom aliases are available:
 
 * __am__: Amend the currently staged files to the latest commit
+* __au__: Mark the given file as "assume unchanged"
 * __branches__: Show verbose branches output
 * __c__: Clone
 * __ca__: Commit all changes
@@ -17,6 +18,7 @@ The following custom aliases are available:
 * __go__: Switch to a branch, creating it if necessary
 * __l__: View abbreviated SHA, description, and graph of the latest 20 commits
 * __ld__: View alternative, more detailed log, description and graph of latest commits
+* __nau__: Un-mark the given file as "assume unchanged"
 * __remotes__: Show verbose remotes output
 * __s__: Show a concise status of the working directory, along with the branch and number of commits ahead/behind
 * __showlast__: Like "git show myfile", but uses the last commit that changed "myfile"

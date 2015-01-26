@@ -151,3 +151,7 @@
 
   # Remove last commit.
   rlc = !git reset --hard HEAD~1
+
+  # Assume unchanged & undo.
+  au = update-index --assume-unchanged
+  nau = update-index --no-assume-unchanged
