@@ -60,6 +60,7 @@ brew install bfg
 brew install colordiff
 brew install composer
 brew install ctags
+brew install dos2unix
 brew install dtrx
 brew install gettext
 brew install git
