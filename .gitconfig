@@ -127,7 +127,7 @@
   ca = !git add -A && git commit -av
 
   # Amend the currently staged files to the latest commit.
-  a = commit --amend --reuse-message=HEAD
+  am = commit --amend --reuse-message=HEAD
 
   # Show verbose output about tags, branches or remotes.
   tags = tag -l
