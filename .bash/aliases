@@ -101,6 +101,10 @@ alias photoshop='open -a "Adobe Photoshop CS6"'
 # Open Chrome Canary with web security disabled to overcome CORS issues for local dev.
 alias corsdev="open -n -a /opt/homebrew-cask/Caskroom/google-chrome-canary/latest/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --disable-web-security"
 
+# Currency conversions.
+alias usd="cconv 1 usd brl"
+alias eur="cconv 1 eur brl"
+
 # Create a new MySQL database.
 alias mc="mysql-create"
 
