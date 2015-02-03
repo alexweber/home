@@ -36,6 +36,7 @@ brew cask install dosbox
 brew cask install dropbox
 brew cask install firefox
 brew cask install flash-player
+brew cask install gitter
 brew cask install google-chrome
 brew cask install google-chrome-canary
 # brew cask install google-drive
