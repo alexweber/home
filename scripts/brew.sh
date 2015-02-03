@@ -76,6 +76,7 @@ brew install homebrew/php/php-cs-fixer
 brew install qcachegrind
 brew install rename
 # brew install solr36
+brew install ssh-copy-id
 brew install tree
 brew install zopfli
 
