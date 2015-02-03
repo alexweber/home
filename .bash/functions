@@ -17,3 +17,8 @@ function tre() {
 function pk() {
   pbcopy < ~/.ssh/id_rsa.pub
 }
+
+# Convert currencies; cconv {amount} {from} {to}
+function cconv() {
+  wget -qO- "http://www.google.com/finance/converter?a=$1&from=$2&to=$3&hl=es" |  sed '/res/!d;s/<[^>]*>//g';
+}
