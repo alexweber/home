@@ -17,3 +17,5 @@ __MACOSX
 
 # Atom packages.
 .atom/packages
+.atom/projects.cson
+.atom/local-history
