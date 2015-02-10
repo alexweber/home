@@ -32,5 +32,9 @@
   linter: {}
   editor:
     invisibles: {}
+    showIndentGuide: true
   "autocomplete-plus": {}
-  minimap: {}
+  minimap:
+    plugins:
+      "git-diff": true
+  "linter-jshint": {}
