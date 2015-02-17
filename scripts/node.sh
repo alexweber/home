@@ -17,6 +17,8 @@ sudo npm install -g gulp
 sudo npm install -g gulp-util
 sudo npm install -g ionic
 sudo npm install -g ios-sim
+sudo npm install -g karma-cli
+sudo npm install -g protractor
 sudo npm install -g yo
 
 # Yeoman generators.
