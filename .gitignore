@@ -19,3 +19,4 @@ __MACOSX
 .atom/packages
 .atom/projects.cson
 .atom/local-history
+.atom/.apm
