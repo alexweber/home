@@ -25,9 +25,10 @@ The following scripts are available in the "scripts" folder:
 * `brew.sh` Install command-line tools using Homebrew
 * `cask.sh` Install native OS X apps using Homebrew Cask
 * `node.sh` Install Node.js packages globally
-* `composer.sh` Install Composer packages globally
+* `composer.sh` Install global Composer PHP packages
 * `atom.sh` Install Atom Editor packages
-* `pecl.sh` Install PHP extensions
+* `pear.sh` Install global PHP libraries via PEAR
+* `pecl.sh` Install global PHP extensions via PECL
 * `mamp.sh` Add PHP extensions to MAMP
 * `home.sh` __Wrapper around the all of the other scripts; use this to set up a new Mac__
 
