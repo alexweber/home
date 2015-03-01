@@ -23,15 +23,15 @@ sudo npm install -g protractor
 sudo npm install -g yo
 
 # Yeoman generators.
-sudo npm install -g generator-angular
-sudo npm install -g generator-angularjs-cordova
-sudo npm install -g generator-atom
-sudo npm install -g generator-generator
-sudo npm install -g generator-gulp-angular
-sudo npm install -g generator-gulp-angularfire
-sudo npm install -g generator-gulp-bootstrap
-sudo npm install -g generator-hedley
-sudo npm install -g generator-ionic
-sudo npm install -g generator-node-express
-sudo npm install -g generator-symfony
-sudo npm install -g generator-webapp
+# sudo npm install -g generator-angular
+# sudo npm install -g generator-angularjs-cordova
+# sudo npm install -g generator-atom
+# sudo npm install -g generator-generator
+# sudo npm install -g generator-gulp-angular
+# sudo npm install -g generator-gulp-angularfire
+# sudo npm install -g generator-gulp-bootstrap
+# sudo npm install -g generator-hedley
+# sudo npm install -g generator-ionic
+# sudo npm install -g generator-node-express
+# sudo npm install -g generator-symfony
+# sudo npm install -g generator-webapp
