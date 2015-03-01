@@ -77,6 +77,7 @@ brew cask install tower
 brew cask install transmission
 brew cask install transmit
 # brew cask install truecrypt
+brew cask install unity-web-player
 brew cask install vagrant
 # brew cask install vienna
 brew cask install virtualbox
