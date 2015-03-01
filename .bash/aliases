@@ -118,6 +118,7 @@ alias cm="mailcatcher --smtp-port 30000"
 
 # Drush uninstall.
 alias dun="drush pm-uninstall"
+alias dup="drush updatedb --yes"
 
 # PHP Code Sniffer for Drupal.
 # This requires Composer and the Drupal "Coder" module.
