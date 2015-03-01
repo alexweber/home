@@ -8,4 +8,5 @@ composer global require "phpunit/phpunit=4.4.*"
 composer global require "behat/mink": "*"
 composer global require "behat/mink-goutte-driver": "*"
 composer global require "behat/mink-selenium2-driver": "*"
+composer global require "squizlabs/php_codesniffer=*"
 composer global install
