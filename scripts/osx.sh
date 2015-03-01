@@ -703,10 +703,10 @@ defaults write com.google.Chrome.canary DisablePrintPreview -bool true
 # Install Sublime Text settings
 cp -r .init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Preferences.sublime-settings 2> /dev/null
 
-# Install Package Control plugin
+# Package Control plugin
 curl -o ~/Library/Application\ Support/Sublime\ Text*/Installed\ Packages/Package\ Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package
 
-# Install Indent XML plugin.
+# Indent XML plugin.
 git clone git@github.com:alek-sys/sublimetext_indentxml.git  ~/Library/Application\ Support/Sublime\ Text\ 2/Installed\ Packages/Indent\ XML
 
 ###############################################################################
