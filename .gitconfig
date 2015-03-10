@@ -83,6 +83,56 @@
   default = simple
 
 [alias]
+	# Amend the currently staged files to the latest commit.
+	am = commit --amend --reuse-message=HEAD
+
+	# Assume unchanged & undo it.
+	au = update-index --assume-unchanged
+	nau = update-index --no-assume-unchanged
+
+	# Verbose branches info.
+	branches = branch -a
+	b = branches
+
+	# Clone a repository including all submodules.
+  c = clone --recursive
+
+	# Commit all changes.
+	ca = !git add -A && git commit -av
+
+	# Commit.
+  ci = commit
+
+	# Checkout.
+	co = checkout
+
+  # List contributors with number of commits.
+  contribs = shortlog --summary --numbered
+	contrib = contribs
+
+	# Credit an author on the latest commit.
+  credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+
+	# Show the diff between the latest commit and the current state.
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+	# Remove branches that have already been merged with master (delete merged).
+  dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+	# Show the staged changes.
+	dc = diff --cached
+
+	# Fetching.
+	f = fetch
+	fa = fetch --all
+
+	# When doing "git git log" or some such, do not complain about "git" not
+  # being a valid Git command. This happens when copy-pasting examples, for
+  # instance.
+  git = !git
+
+	# Switch to a branch, creating it if necessary.
+	go = checkout -B
 
   # View abbreviated SHA, description, and graph of the latest 20 commits.
   l = log --graph -n 20 --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
@@ -90,68 +140,31 @@
   # View alternative, more detailed log, description and graph of latest commits.
   ld = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
 
+	# Verbose remotes info.
+	remotes = remote -v
+
   # Show a concise status of the working directory, along with the branch and
   # the number of commits behind and/or ahead.
   s = status --short --branch
 
+	# Like "git show myfile", but uses the last commit that changed "myfile".
+	showlast = log -n 1 -p
+
+	# Show branches that have already been merged with current branch.
+	sm = show-merges
+
   # Status.
   st = status
 
-  # Checkout.
-  co = checkout
-
-  # Switch to a branch, creating it if necessary.
-  go = checkout -B
-
-  # Like "git show myfile", but uses the last commit that changed "myfile".
-  showlast = log -n 1 -p
-
-  # When doing "git git log" or some such, do not complain about "git" not
-  # being a valid Git command. This happens when copy-pasting examples, for
-  # instance.
-  git = !git
-
-  # Show the staged changes.
-  dc = diff --cached
-
-  # Show the diff between the latest commit and the current state.
-  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
-
-  # Clone a repository including all submodules.
-  c = clone --recursive
-
-  # Commit.
-  ci = commit
-
-  # Commit all changes.
-  ca = !git add -A && git commit -av
-
-  # Amend the currently staged files to the latest commit.
-  am = commit --amend --reuse-message=HEAD
-
-  # Show verbose output about tags, branches or remotes.
+	# Verbose tags info.
   tags = tag -l
-  branches = branch -a
-  remotes = remote -v
 
-  # Credit an author on the latest commit.
-  credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
-
-  # List contributors with number of commits.
-  contribs = shortlog --summary --numbered
-
-  # Remove branches that have already been merged with master (delete merged).
-  dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-
-  # Show branches that have already been merged with current branch.
-  sm = show-merges
+	# Remove last commit. @TODO test both and remove one.
+	#rlc = !git reset --hard HEAD~1
 
   # Undo last commit.
-  u = reset --soft HEAD~1
+  undo = reset --soft HEAD~1
+	u = undo
 
-  # Remove last commit.
-  rlc = !git reset --hard HEAD~1
-
-  # Assume unchanged & undo.
-  au = update-index --assume-unchanged
-  nau = update-index --no-assume-unchanged
+	# Undo push.
+  udp = push -f origin HEAD^:master
