@@ -13,13 +13,18 @@ sudo npm install -g cordova
 sudo npm install -g firebase-tools
 # sudo npm install -g gitbanner
 sudo npm install -g grunt-cli
+# sudo npm install -g gitgoodies
 sudo npm install -g gulp
 sudo npm install -g gulp-util
 sudo npm install -g ionic
 sudo npm install -g ios-sim
+sudo npm install -g jshint
+sudo npm install -g jspm
 sudo npm install -g karma-cli
+sudo npm install -g node-gyp
 sudo npm install -g npm-check-updates
 sudo npm install -g protractor
+sudo npm install -g scss-lint
 sudo npm install -g yo
 
 # Yeoman generators.
