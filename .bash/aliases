@@ -57,7 +57,6 @@ alias lsd='ls -l | grep "^d"'
 # Git.
 alias g="git"
 alias h="history"
-alias undopush="git push -f origin HEAD^:master"
 
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'

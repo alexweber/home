@@ -33,6 +33,5 @@ The following custom commands are available:
 * __showdesktop__: Show all Desktop icons
 * __simpletest__: Run simpletest from the terminal in a Drupal 7 site root
 * __timer__: Start a simple stopwatch
-* __undopush__: Undo last Git push
 * __update__: Get OS X Software Updates, update installed Ruby gems, Homebrew, npm, and their installed packages
 * __whois__: Enhanced WHOIS lookup
