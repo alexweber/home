@@ -20,6 +20,7 @@
       "styleguide"
       "welcome"
       "archive-view"
+      "linter-phpcs"
     ]
     themes: [
       "seti-ui"
@@ -36,5 +37,6 @@
   "autocomplete-plus": {}
   minimap:
     plugins:
-      "git-diff": true
+      "git-diff": false
   "linter-jshint": {}
+  "linter-phpcs": {}
