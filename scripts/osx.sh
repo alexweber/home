@@ -709,6 +709,9 @@ curl -o ~/Library/Application\ Support/Sublime\ Text*/Installed\ Packages/Packag
 # Indent XML plugin.
 git clone git@github.com:alek-sys/sublimetext_indentxml.git  ~/Library/Application\ Support/Sublime\ Text\ 2/Installed\ Packages/Indent\ XML
 
+# Color Picker plugin.
+git clone git@github.com:weslly/ColorPicker.git ~/Library/Application\ Support/Sublime\ Text\ 2/Installed\ Packages/ColorPicker
+
 ###############################################################################
 # Transmission.app                                                            #
 ###############################################################################
