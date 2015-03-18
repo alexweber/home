@@ -23,7 +23,9 @@ sudo npm install -g jspm
 sudo npm install -g karma-cli
 sudo npm install -g node-gyp
 sudo npm install -g npm-check-updates
+sudo npm install -g phonegap
 sudo npm install -g protractor
+sudo npm install -g typescript
 sudo npm install -g scss-lint
 sudo npm install -g yo
 
