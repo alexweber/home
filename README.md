@@ -27,7 +27,6 @@ The following scripts are available in the "scripts" folder:
 * `node.sh` Install Node.js packages globally
 * `composer.sh` Install global Composer PHP packages
 * `atom.sh` Install Atom Editor packages
-* `pear.sh` Install global PHP libraries via PEAR
 * `pecl.sh` Install global PHP extensions via PECL
 * `mamp.sh` Add PHP extensions to MAMP
 * `home.sh` __Wrapper around the all of the other scripts; use this to set up a new Mac__
