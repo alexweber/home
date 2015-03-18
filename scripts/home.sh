@@ -33,9 +33,6 @@ source ruby.sh
 # Install Composer packages.
 source composer.sh
 
-# Install PHP libraries.
-source pear.sh
-
 # Install PHP extensions.
 source pecl.sh
 
