@@ -14,3 +14,4 @@ sudo gem update --system
 # Install our global gems.
 sudo gem install bundler
 sudo gem install mailcatcher
+sudo gem install scss-lint
