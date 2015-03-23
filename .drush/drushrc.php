@@ -317,3 +317,31 @@
 #  $options['include'] = $repo_top . '/drush/commands';
 #  $options['alias-path'] = $repo_top . '/drush/aliases';
 #}
+
+// Don't complain about "drush" not being a valid command when copy-pasting.
+$options['shell-aliases']['drush'] = '!drush';
+
+// Never understood why this one got removed.
+$options['shell-aliases']['un'] = 'pm-uninstall';
+
+// Lulz.
+$options['shell-aliases']['unsuck'] = 'pm-disable -y overlay,dashboard,toolbar,shortut,color';
+
+// Useful for working with makefiles/profiles when you gotta re-run repeatedly ad-infinitum.
+// $options['cache'] = TRUE;
+
+// Skip contents from certain tables and other tables entirely when doing sql dumps and syncs.
+$options['structure-tables']['common'] = array('cache', 'cache_*', 'history', 'search_*', 'sessions', 'watchdog');
+$options['skip-tables']['common'] = array('migration_*');
+
+// Never use cache with sql-sync.
+$command_specific['sql-sync'] = array('no-cache' => TRUE);
+
+// Always use verbose output for rsync.
+$command_specific['rsync'] = array('verbose' => TRUE);
+
+// Meh.
+$command_specific['site-install'] = array('account-name' => 'admin', 'account-pass' => 'admin');
+
+// Replace "gitusername" with your own.
+$options['shell-aliases']['pm-clone'] = 'pm-download --gitusername=alexweber15@gmail.com --package-handler=git_drupalorg';
