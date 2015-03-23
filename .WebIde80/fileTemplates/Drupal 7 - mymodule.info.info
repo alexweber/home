@@ -1,0 +1,12 @@
+name = ${name}
+description = ${description}
+package = ${package}
+#set( $core = "7.x" )
+core = ${core}
+#if( ${hostedByDrupalOrg} != "1" && ${hostedByDrupalOrg} != "y")
+#set( $version = "${core}-1.x" )
+version = ${version}
+#end
+
+;files[] =
+;dependencies[] = 

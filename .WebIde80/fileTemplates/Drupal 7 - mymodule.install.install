@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the ${moduleNameHuman} module.
+ */
+
+//hook_requirements
+
+//hook_schema
+
+//hook_install
+
+//hook_uninstall
+
+//hook_enable
+
+//hook_disable
