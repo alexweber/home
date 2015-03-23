@@ -21,6 +21,14 @@
       "welcome"
       "archive-view"
       "linter-phpcs"
+      "autocomplete-plus"
+      "language-mustache"
+      "deprecation-cop"
+      "language-coffee-script"
+      "language-csharp"
+      "timecop"
+      "language-make"
+      "metrics"
     ]
     themes: [
       "seti-ui"
@@ -41,3 +49,4 @@
     displayCodeHighlights: false
   "linter-jshint": {}
   "linter-phpcs": {}
+  "atom-beautify": {}
