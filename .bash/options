@@ -49,7 +49,7 @@ fi;
 
 # If we have found drush.complete.sh, then source it.
 if [ -f "$HOME/.composer/vendor/drush/drush/drush.complete.sh" ] ; then
-  . "$HOME/.composer/vendor/drush/drush/drush.complete.sh"
+  source "$HOME/.composer/vendor/drush/drush/drush.complete.sh"
 fi
 
 # Completion for Homebrew.
