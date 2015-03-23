@@ -107,7 +107,7 @@ fi;
 
 # Highlight the Drush site alias if available.
 if [ "\$(type -t __drush_ps1)" ]; then
-	drushStyle='$(__drush_ps1 " as ${blue}%s")'
+	drushStyle='$(__drush_ps1 "${white} using ${blue}%s")'
 fi
 
 # Set the terminal title to the current working directory.
@@ -116,7 +116,7 @@ PS1+="\[${bold}\]\n"; # newline
 PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${white}\] at ";
 PS1+="\[${hostStyle}\]\h"; # host
-PS1+=" \[${drushStyle}\]"; # Drush site
+PS1+="\[${drushStyle}\]"; # Drush site
 PS1+="\[${white}\] in ";
 PS1+="\[${green}\]\w"; # working directory
 PS1+="\$(prompt_git \"${white} on ${violet}\")"; # Git repository details
