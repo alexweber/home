@@ -12,8 +12,9 @@ __MACOSX
 # SASS cache.
 .sass-cache
 
-# Drush cache.
+# Drush cache & aliases.
 .drush/cache
+.drush/*.aliases.drushrc.php
 
 # Atom packages.
 .atom/packages
