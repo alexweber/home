@@ -2,17 +2,20 @@
 
 The following custom commands are available:
 
-* __.__: cd ..
-* __..__: cd ../..
-* __...__: cd ../../..
-* __....__: cd ../../../..
+* __..__: cd ..
+* __...__: cd ../..
+* __....__: cd ../../..
+* __.....__: cd ../../../..
 * __afk__: Lock the screen
 * __cask__: brew cask
 * __chromekill__: Kill all the tabs in Chrome to free up memory
 * __cm__: Start MailCatcher
 * __codercs__: PHP Code Sniffer for Drupal
 * __corsdev__: Open Chrome Canary with web security disabled to overcome CORS issues for local dev
+* __d__: Drush (default)
 * __d8__: Drush for Drupal 8
+* __dun__: Drush uninstall modules (skip confirmation)
+* __dup__: Drush run database updates (skip confirmation)
 * __emptytrash__: Empty the Trash on all mounted volumes and the main HDD as well as system logs
 * __hosts__: Open hosts file in $EDITOR
 * __g__: git
