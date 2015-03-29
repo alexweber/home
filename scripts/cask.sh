@@ -52,7 +52,7 @@ brew cask install kaleidoscope
 # brew cask install knox
 brew cask install lastfm
 brew cask install libreoffice
-brew cask install linkinus
+# brew cask install linkinus
 brew cask install mamp
 # brew cask install miro-video-converter
 brew cask install minco
@@ -82,7 +82,7 @@ brew cask install vagrant
 # brew cask install vienna
 brew cask install virtualbox
 brew cask install vlc
-brew cask install yandex
+# brew cask install yandex
 
 # Install custom Casks.
 brew cask install "~/.init/popcorn-time.rb"
