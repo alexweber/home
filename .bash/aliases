@@ -127,17 +127,17 @@ alias codercs="phpcs --standard=~/.composer/vendor/drupal/coder/coder_sniffer/Dr
 alias simpletest="php scripts/run-tests.sh --color --verbose"
 
 # Drupal 7.
-export PATH=/Applications/MAMP/bin/php/php5.3.29/bin:$PATH
-export DRUSH_PHP=/Applications/MAMP/bin/php/php5.3.29/bin/php
+export PATH=/Applications/MAMP/bin/php/php5.3.*/bin:$PATH
+export DRUSH_PHP=/Applications/MAMP/bin/php/php5.3.*/bin/php
 
 # Drupal 8.
 #export PATH=/Applications/MAMP/bin/php/php5.4.33/bin:$PATH
 #export DRUSH_PHP=/Applications/MAMP/bin/php/php5.4.33/bin/php
 
 # Drush for Drupal 8 (git clone - no official release yet)
-alias d8='DRUSH_PHP=/Applications/MAMP/bin/php/php5.4.33/bin/php ~/Projects/drupal8/drush/drush'
+alias d8='DRUSH_PHP=/Applications/MAMP/bin/php/php5.4.*/bin/php ~/Projects/drupal8/drush/drush'
 
 # PHP 5.4 for Drupal 8 in the command line.
-alias php54='/Applications/MAMP/bin/php/php5.4.33/bin/php'
+alias php54='/Applications/MAMP/bin/php/php5.4.*/bin/php'
 
 # @TODO cleanup Drupal 7 vs 8 stuff (var for php minor versions to sub in multiple places seamlessly?)
