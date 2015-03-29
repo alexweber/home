@@ -53,6 +53,7 @@ brew cask install kaleidoscope
 brew cask install lastfm
 brew cask install libreoffice
 # brew cask install linkinus
+brew cask install macdown
 brew cask install mamp
 # brew cask install miro-video-converter
 brew cask install minco
