@@ -8,10 +8,9 @@
 	"file_exclude_patterns":
 	[
 		".DS_Store",
-		"Desktop.ini",
+		"__MACOSX",
 		"*.pyc",
 		"._*",
-		"Thumbs.db",
 		".Spotlight-V100",
 		".Trashes"
 	],
@@ -20,6 +19,8 @@
 		".git",
 		"node_modules",
 		"bower_components",
+		".idea",
+		".sass-cache"
 	],
 	"ignored_packages":
 	[
