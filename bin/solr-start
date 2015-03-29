@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-# This is just my crappy way of starting my local multicore dev solr instance :)
+# This is just my crappy way of starting my local multicore Solr dev instance :)
 
-cd ~/Developer/apache-solr-3.6.2/drupal && java -jar start.jar
+cd ~/Developer/apache-solr-3.*/drupal && java -jar start.jar
