@@ -21,15 +21,16 @@
 
 The following scripts are available in the "scripts" folder:
 
-* `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
+* `atom.sh` Install Atom Editor packages
 * `brew.sh` Install command-line tools using Homebrew
 * `cask.sh` Install native OS X apps using Homebrew Cask
-* `node.sh` Install Node.js packages globally
 * `composer.sh` Install global Composer PHP packages
-* `atom.sh` Install Atom Editor packages
-* `pecl.sh` Install global PHP extensions via PECL
-* `mamp.sh` Add PHP extensions to MAMP
 * `home.sh` __Wrapper around the all of the other scripts; use this to set up a new Mac__
+* `mamp.sh` Add PHP extensions to MAMP
+* `node.sh` Install global Node.js packages
+* `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
+* `pecl.sh` Install global PHP extensions via PECL
+* `ruby.sh` Install global Ruby gems
 
 ## Help
 
