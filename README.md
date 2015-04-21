@@ -30,6 +30,7 @@ The following scripts are available in the "scripts" folder:
 * `node.sh` Install global Node.js packages
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `pecl.sh` Install global PHP extensions via PECL
+* `python.sh` Install global Python packages via Pip
 * `ruby.sh` Install global Ruby gems
 
 ## Help

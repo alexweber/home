@@ -42,5 +42,8 @@ source mamp.sh
 # Install Atom plugins.
 source node.sh
 
+# Install Pyton packages.
+source python.sh
+
 # Setup OSX.
 source osx.sh

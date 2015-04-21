@@ -10,6 +10,9 @@ alias sudo='sudo ';
 alias please='sudo'
 alias plz='please'
 
+# Auto-correct last input.
+alias fuck='$(thefuck $(fc -ln -1))'
+
 # Easier folder navigation.
 alias ..="cd .."
 alias ...="cd ../.."
