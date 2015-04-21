@@ -70,7 +70,7 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 
 # Get OS X Software Updates, update installed Ruby gems, Homebrew, npm, and their
 # installed packages.
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update --system; sudo gem update'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm update -g; sudo gem update --system; sudo gem update; composer self-update; composer global update; sudo pecl update; pipudate;'
 
 # What's my IP address.
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -123,6 +123,9 @@ alias mr="mysql-reset"
 
 # Start Mailcatcher ("catch mail").
 alias cm="mailcatcher --smtp-port 30000"
+
+# Update all Python packages installed via Pip.
+alias pipudate="pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U"
 
 ### DRUPAL STUFF ###
 
