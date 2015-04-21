@@ -13,3 +13,13 @@
 #     'prefix': 'log'
 #     'body': 'console.log $1'
 #
+'.source.js':
+  'Console log':
+    'prefix': 'log'
+  	'body': 'console.log $1'
+  'Console warn':
+    'prefix': 'warn'
+  	'body': 'console.warn $1'
+	'Closure':
+		'prefix': 'cl'
+		'body': '(function () { $1 })();'
