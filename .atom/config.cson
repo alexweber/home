@@ -46,7 +46,6 @@
   minimap:
     plugins:
       "git-diff": false
-    displayCodeHighlights: false
   "linter-jshint": {}
   "linter-phpcs": {}
   "atom-beautify": {}
