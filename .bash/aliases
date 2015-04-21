@@ -18,6 +18,9 @@ alias .....="cd ../../../.."
 # I <3 u cask.
 alias cask='brew cask'
 
+# I <3 u sublime.
+alias s="subl"
+
 # Shortcut to edit hosts file.
 alias hosts='sudo $EDITOR /etc/hosts'
 
