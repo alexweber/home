@@ -1,6 +1,6 @@
 # Bash Alias Cheat Sheet
 
-The following custom commands are available:
+The following custom aliases/commands are available:
 
 * __..__: cd ..
 * __...__: cd ../..
@@ -17,6 +17,7 @@ The following custom commands are available:
 * __dun__: Drush uninstall modules (skip confirmation)
 * __dup__: Drush run database updates (skip confirmation)
 * __emptytrash__: Empty the Trash on all mounted volumes and the main HDD as well as system logs
+* __fuck__: Auto-correct last input
 * __hosts__: Open hosts file in $EDITOR
 * __g__: git
 * __h__: history
@@ -28,9 +29,12 @@ The following custom commands are available:
 * __mc__: Create a new MySQL database
 * __mr__: Truncate a MySQL database
 * __md5sum__: Generate MD5 checksum
+* __pipupdate__: Update all Python packages globally installed via Pip
+* __phpstorm__/__phs__: Open with PHPStorm
 * __photoshop__: Open with Photoshop
 * __php54__: PHP 5.4 for Drupal 8
-* __please__: sudo
+* __please__/__plz__: sudo
+* __s__: Sublime Text
 * __sha1sum__: Generate SHA1 checksum
 * __show__: Show hidden files in Finder
 * __showdesktop__: Show all Desktop icons
