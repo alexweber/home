@@ -101,6 +101,10 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Open with Photoshop.
 alias photoshop='open -a "Adobe Photoshop CS6"'
 
+# Open with PHPStorm.
+alias phpstorm='/opt/homebrew-cask/Caskroom/phpstorm/8.0.1/PhpStorm.app/Contents/MacOS/phpstorm'
+alias phs='phpstorm'
+
 # Open Chrome Canary with web security disabled to overcome CORS issues for local dev.
 alias corsdev="open -n -a /opt/homebrew-cask/Caskroom/google-chrome-canary/latest/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --disable-web-security"
 
