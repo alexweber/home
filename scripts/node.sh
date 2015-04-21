@@ -10,14 +10,13 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 sudo npm install -g bower
 sudo npm install -g bower-update
-sudo npm install -g browserify
+#sudo npm install -g browserify
 sudo npm install -g cordova
 sudo npm install -g firebase-tools
 # sudo npm install -g gitbanner
 sudo npm install -g grunt-cli
 # sudo npm install -g gitgoodies
 sudo npm install -g gulp
-sudo npm install -g gulp-util
 sudo npm install -g ionic
 sudo npm install -g ios-deploy
 sudo npm install -g ios-sim
@@ -25,11 +24,13 @@ sudo npm install -g jshint
 sudo npm install -g jspm
 sudo npm install -g karma-cli
 sudo npm install -g node-gyp
+sudo npm install -g nodemon
 sudo npm install -g npm-check-updates
 # sudo npm install -g phonegap
 sudo npm install -g protractor
 sudo npm install -g typescript
 sudo npm install -g scss-lint
+sudo npm install -g slush
 sudo npm install -g yo
 
 # Yeoman generators.
