@@ -117,6 +117,8 @@ alias cm="mailcatcher --smtp-port 30000"
 
 # Convenience.
 alias d="drush"
+alias druhs="drush"
+alias drsuh="drush"
 alias dun="drush pm-uninstall --yes"
 alias dup="drush updatedb --yes"
 
