@@ -13,6 +13,7 @@ sudo npm install -g bower-update
 #sudo npm install -g browserify
 sudo npm install -g cordova
 sudo npm install -g firebase-tools
+sudo npm install -g fixmyjs
 # sudo npm install -g gitbanner
 sudo npm install -g grunt-cli
 # sudo npm install -g gitgoodies
