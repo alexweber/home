@@ -21,7 +21,6 @@
       "welcome"
       "archive-view"
       "linter-phpcs"
-      "autocomplete-plus"
       "language-mustache"
       "deprecation-cop"
       "language-coffee-script"
@@ -29,10 +28,14 @@
       "timecop"
       "language-make"
       "metrics"
+      "feedback"
+      "autocomplete"
+      "language-source"
+      "language-yaml"
     ]
     themes: [
       "seti-ui"
-      "monokai"
+      "one-dark-syntax"
     ]
     projectHome: "~/Projects"
     audioBeep: false
@@ -42,7 +45,9 @@
   editor:
     invisibles: {}
     showIndentGuide: true
-  "autocomplete-plus": {}
+    preferredLineLength: 120
+  "autocomplete-plus":
+    enableAutoActivation: false
   minimap:
     plugins:
       "git-diff": false
