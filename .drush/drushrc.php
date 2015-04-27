@@ -331,11 +331,16 @@ $options['shell-aliases']['unsuck'] = 'pm-disable -y overlay,dashboard,toolbar,s
 // $options['cache'] = TRUE;
 
 // Skip contents from certain tables and other tables entirely when doing sql dumps and syncs.
-$options['structure-tables']['common'] = array('cache', 'cache_*', 'history', 'search_*', 'sessions', 'watchdog');
+$options['structure-tables']['common'] = array('cache', 'cache_*', 'history', 'search_*', 'sessions', 'watchdog', 'field_revision_*', 'webform_submitted_data', 'webform_submissions', 'rc_core_order');
 $options['skip-tables']['common'] = array('migration_*');
 
-// Never use cache with sql-sync.
-$command_specific['sql-sync'] = array('no-cache' => TRUE);
+// Default options for sql-sync.
+$command_specific['sql-sync'] = array(
+	// Never use cache.
+  'no-cache' => TRUE,
+	// Ignore common structure tables.
+  'structure-tables-key' => 'common',
+);
 
 // Always use verbose output for rsync.
 $command_specific['rsync'] = array('verbose' => TRUE);
