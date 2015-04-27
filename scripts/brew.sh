@@ -78,6 +78,7 @@ brew install rename
 # brew install solr36
 brew install ssh-copy-id
 brew install tree
+brew install wp-cli
 brew install zopfli
 
 # Use latest rsync rather than out-dated OS X rsync install separately from the
