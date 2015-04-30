@@ -20,7 +20,6 @@
       "styleguide"
       "welcome"
       "archive-view"
-      "linter-phpcs"
       "language-mustache"
       "deprecation-cop"
       "language-coffee-script"
@@ -32,6 +31,7 @@
       "autocomplete"
       "language-source"
       "language-yaml"
+      "linter-phpcs"
     ]
     themes: [
       "seti-ui"
@@ -41,16 +41,30 @@
     audioBeep: false
   "atom-ctags":
     autoBuildTagsWhenActive: true
-  linter: {}
+  linter:
+    lintOnEditorFocus: false
+    showInfoMessages: true
+    statusBar: "Show error of the selected line"
+    lintOnChange: false
+    clearOnChange: true
+    subtleLinterErrors: [
+      "phpcs"
+    ]
   editor:
     invisibles: {}
-    showIndentGuide: true
-    preferredLineLength: 120
-  "autocomplete-plus":
-    enableAutoActivation: false
-  minimap:
-    plugins:
-      "git-diff": false
-  "linter-jshint": {}
-  "linter-phpcs": {}
-  "atom-beautify": {}
+  "linter-jshint":
+    jshintExecutablePath: "/usr/local/bin/jshint"
+  "exception-reporting":
+    userId: "84293ec2-27b8-7254-2305-899a45ce785f"
+  "linter-phpcs":
+    standard: "/Users/alex/Bluetent/code-sniffer/Drupal"
+jshint:
+  validateOnlyOnSave: true
+minimap:
+  plugins:
+    "git-diff": false
+"autocomplete-plus":
+  enableAutoActivation: false
+editor:
+  showIndentGuide: true
+  preferredLineLength: 120
