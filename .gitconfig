@@ -162,9 +162,6 @@
 	# Verbose tags info.
   tags = tag -l
 
-	# Remove last commit. @TODO test both and remove one.
-	#rlc = !git reset --hard HEAD~1
-
   # Undo last commit.
   undo = reset --soft HEAD~1
 	u = undo
