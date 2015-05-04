@@ -136,6 +136,9 @@ alias drsuh="drush"
 alias dun="drush pm-uninstall --yes"
 alias dup="drush updatedb --yes"
 
+# Use with `git config core.filemode false` for working with Features.
+alias chmodules='sudo chmod -R 777 sites/all/modules'
+
 # PHP Code Sniffer for Drupal.
 alias codercs="phpcs --standard=~/.composer/vendor/drupal/coder/coder_sniffer/Drupal/ --extensions=php,module,inc,install,test,profile,theme --encoding=utf-8 --colors"
 
