@@ -106,6 +106,9 @@
 	# Checkout.
 	co = checkout
 
+	# Cherry pick.
+	cp = cherry-pick
+
   # List contributors with number of commits.
   contribs = shortlog --summary --numbered
 	contrib = contribs
