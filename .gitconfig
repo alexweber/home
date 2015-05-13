@@ -103,6 +103,9 @@
 	# Commit.
   ci = commit
 
+  # Disable filemode option per repo.
+  cf = config core.filemode false
+
 	# Checkout.
 	co = checkout
 
