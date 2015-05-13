@@ -58,13 +58,13 @@
     userId: "84293ec2-27b8-7254-2305-899a45ce785f"
   "linter-phpcs":
     standard: "/Users/alex/Bluetent/code-sniffer/Drupal"
-editor:
-  showIndentGuide: true
-  preferredLineLength: 120
-"autocomplete-plus":
-  enableAutoActivation: false
+jshint:
+  validateOnlyOnSave: true
 minimap:
   plugins:
     "git-diff": false
-jshint:
-  validateOnlyOnSave: true
+"autocomplete-plus":
+  enableAutoActivation: false
+editor:
+  showIndentGuide: true
+  preferredLineLength: 120
