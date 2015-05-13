@@ -71,6 +71,7 @@ brew install libsass
 brew install phantomjs
 brew install homebrew/php/php53
 # brew install homebrew/php/php53-xdebug
+brew install homebrew/php/php53-jsmin
 brew install homebrew/php/php53-xhprof
 brew install homebrew/php/php-cs-fixer
 brew install qcachegrind
