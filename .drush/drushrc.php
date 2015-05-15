@@ -336,6 +336,8 @@ $options['skip-tables']['common'] = array('migration_*');
 
 // Default options for sql-sync.
 $command_specific['sql-sync'] = array(
+	// Always use verbose output.
+  'verbose' => TRUE,
 	// Never use cache.
   'no-cache' => TRUE,
 	// Ignore common structure tables.
