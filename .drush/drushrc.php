@@ -349,7 +349,9 @@ $command_specific['rsync'] = array(
   // Always use verbose output.
   'verbose' => TRUE,
   // Ignore dynamically generated files.
-
+  'exclude-paths' => 'advagg_css:advagg_js:css:js:languages:styles',
+  // Perform destructive rsync.
+  'delete' => TRUE,
 );
 
 // Meh.
