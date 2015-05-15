@@ -325,7 +325,7 @@ $options['shell-aliases']['drush'] = '!drush';
 $options['shell-aliases']['un'] = 'pm-uninstall';
 
 // Lulz.
-$options['shell-aliases']['unsuck'] = 'pm-disable -y overlay,dashboard,toolbar,shortut,color';
+$options['shell-aliases']['unsuck'] = 'pm-disable -y overlay,dashboard,toolbar,shortcut,color,rdf,comment';
 
 // Useful for working with makefiles/profiles when you gotta re-run repeatedly ad-infinitum.
 // $options['cache'] = TRUE;
