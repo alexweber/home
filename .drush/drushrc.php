@@ -344,8 +344,13 @@ $command_specific['sql-sync'] = array(
   'structure-tables-key' => 'common',
 );
 
-// Always use verbose output for rsync.
-$command_specific['rsync'] = array('verbose' => TRUE);
+// Default options for rsync.
+$command_specific['rsync'] = array(
+  // Always use verbose output.
+  'verbose' => TRUE,
+  // Ignore dynamically generated files.
+
+);
 
 // Meh.
 $command_specific['site-install'] = array('account-name' => 'admin', 'account-pass' => 'admin');
