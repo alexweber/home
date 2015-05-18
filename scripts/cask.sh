@@ -85,6 +85,16 @@ brew cask install virtualbox
 brew cask install vlc
 # brew cask install yandex
 
+# Quick Look plugins.
+brew cask install qlcolorcode
+brew cask install qlstephen
+brew cask install qlmarkdown
+brew cask install quicklook-json
+brew cask install qlprettypatch
+brew cask install quicklook-csv
+brew cask install qlimagesize
+brew cask install webpquicklook
+
 # Install custom Casks.
 brew cask install "~/.init/popcorn-time.rb"
 
