@@ -362,4 +362,5 @@ $command_specific['rsync'] = array(
 $command_specific['site-install'] = array('account-name' => 'admin', 'account-pass' => 'admin');
 
 // Replace "gitusername" with your own.
-$options['shell-aliases']['pm-clone'] = 'pm-download --gitusername=alexweber15@gmail.com --package-handler=git_drupalorg';
+// $options['shell-aliases']['pm-clone'] = 'pm-download --gitusername=alexweber15@gmail.com --package-handler=git_drupalorg';
+$options['shell-aliases']['pmc'] = 'pm-download --gitusername=alexweber15@gmail.com --package-handler=git_drupalorg';
