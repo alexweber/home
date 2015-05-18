@@ -324,6 +324,10 @@ $options['shell-aliases']['drush'] = '!drush';
 // Never understood why this one got removed.
 $options['shell-aliases']['un'] = 'pm-uninstall';
 
+// Laziness prevails.
+$options['shell-aliases']['sc'] = 'sql-create';
+$options['shell-aliases']['sd'] = 'sql-drop';
+
 // Lulz.
 $options['shell-aliases']['unsuck'] = 'pm-disable -y overlay,dashboard,toolbar,shortcut,color,rdf,comment';
 
