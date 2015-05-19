@@ -318,6 +318,9 @@
 #  $options['alias-path'] = $repo_top . '/drush/aliases';
 #}
 
+// Use temporary folder for sql dumps.
+$options['dump-dir'] = '/tmp';
+
 // Don't complain about "drush" not being a valid command when copy-pasting.
 $options['shell-aliases']['drush'] = '!drush';
 
