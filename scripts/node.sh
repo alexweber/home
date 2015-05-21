@@ -45,6 +45,7 @@ sudo npm install -g yo
 # sudo npm install -g generator-gulp-bootstrap
 # sudo npm install -g generator-hedley
 # sudo npm install -g generator-ionic
+# sudo npm install -g generator-nm
 # sudo npm install -g generator-node-express
 # sudo npm install -g generator-symfony
 # sudo npm install -g generator-webapp
