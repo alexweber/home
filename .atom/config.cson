@@ -63,13 +63,13 @@
     {}
   minimap:
     {}
-editor:
-  showIndentGuide: true
-  preferredLineLength: 120
-"autocomplete-plus":
-  enableAutoActivation: false
+jshint:
+  validateOnlyOnSave: true
 minimap:
   plugins:
     "git-diff": false
-jshint:
-  validateOnlyOnSave: true
+"autocomplete-plus":
+  enableAutoActivation: false
+editor:
+  showIndentGuide: true
+  preferredLineLength: 120
