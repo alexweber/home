@@ -123,6 +123,9 @@
 	# Show the staged changes.
 	dc = diff --cached
 
+  # Create a feature branch and push it back up. Assumes origin/master is used.
+  f = "!f() { git checkout master; git pull origin master; git checkout -B \"$1\"; git push -u origin \"$1\"; }; f"
+
 	# Fetching.
 	fe = fetch
 	fa = fetch --all
