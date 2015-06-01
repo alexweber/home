@@ -124,7 +124,7 @@
 	dc = diff --cached
 
 	# Fetching.
-	f = fetch
+	fe = fetch
 	fa = fetch --all
 
   # Disable filemode option per repo.
