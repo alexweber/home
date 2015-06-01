@@ -103,9 +103,6 @@
 	# Commit.
   ci = commit
 
-  # Disable filemode option per repo.
-  cf = config core.filemode false
-
 	# Checkout.
 	co = checkout
 
@@ -131,6 +128,9 @@
 	# Fetching.
 	f = fetch
 	fa = fetch --all
+
+  # Disable filemode option per repo.
+  fm = config core.filemode false
 
 	# When doing "git git log" or some such, do not complain about "git" not
   # being a valid Git command. This happens when copy-pasting examples, for
