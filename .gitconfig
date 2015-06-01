@@ -115,7 +115,7 @@
   credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 
 	# Show the diff between the latest commit and the current state.
-	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	d = "!git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
 	# Remove branches that have already been merged with master (delete merged).
   dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
