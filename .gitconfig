@@ -130,9 +130,7 @@
   # Disable filemode option per repo.
   fm = config core.filemode false
 
-	# When doing "git git log" or some such, do not complain about "git" not
-  # being a valid Git command. This happens when copy-pasting examples, for
-  # instance.
+	# Be more forgiving for "git git" typos when copy-pasting.
   git = !git
 
 	# Switch to a branch, creating it if necessary.
