@@ -63,6 +63,11 @@
     {}
   minimap:
     {}
+  "tool-bar":
+    position: "Left"
+    visible: false
+  "atom-typescript":
+    {}
 jshint:
   validateOnlyOnSave: true
 minimap:
