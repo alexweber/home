@@ -91,8 +91,7 @@
 	nau = update-index --no-assume-unchanged
 
 	# Verbose branches info.
-	branches = branch -a
-	b = branches
+	b = branch -a
 
 	# Clone a repository including all submodules.
   c = clone --recursive
@@ -110,8 +109,7 @@
 	cp = cherry-pick
 
   # List contributors with number of commits.
-  contribs = shortlog --summary --numbered
-	contrib = contribs
+  contrib = shortlog --summary --numbered
 
 	# Credit an author on the latest commit.
   credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
@@ -169,8 +167,7 @@
   tags = tag -l
 
   # Undo last commit.
-  undo = reset --soft HEAD~1
-	u = undo
+	undo = reset --soft HEAD~1
 
 	# Undo push.
   udp = push -f origin HEAD^:master
