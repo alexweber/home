@@ -55,6 +55,10 @@ fi
 # Completion for Homebrew.
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
+# NVM.
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # Completion for WP CLI.
 source "$HOME/.init/wp-completion.sh"
 
