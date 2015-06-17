@@ -324,6 +324,9 @@ $options['dump-dir'] = '/tmp';
 // Don't complain about "drush" not being a valid command when copy-pasting.
 $options['shell-aliases']['drush'] = '!drush';
 
+// Bluetent.
+$options['shell-aliases']['rcl'] = 'eval "print rc_site_renew_license_fetch(\'dev\');"';
+
 // Never understood why this one got removed.
 $options['shell-aliases']['un'] = 'pm-uninstall';
 
