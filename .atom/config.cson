@@ -51,23 +51,23 @@
       "phpcs"
     ]
   editor:
-    invisibles:
-      {}
+    invisibles: {}
+    fontSize: 15
   "linter-jshint":
     jshintExecutablePath: "/usr/local/bin/jshint"
+    disableWhenNoJshintrcFileInPath: true
   "exception-reporting":
     userId: "84293ec2-27b8-7254-2305-899a45ce785f"
   "linter-phpcs":
     standard: "/Users/alex/Bluetent/code-sniffer/Drupal"
-  "autocomplete-plus":
-    {}
-  minimap:
-    {}
+  "autocomplete-plus": {}
+  minimap: {}
   "tool-bar":
     position: "Left"
     visible: false
-  "atom-typescript":
-    {}
+  "atom-typescript": {}
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
 jshint:
   validateOnlyOnSave: true
 minimap:
