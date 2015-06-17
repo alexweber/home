@@ -334,7 +334,35 @@ $options['shell-aliases']['ss'] = 'sql-sync';
 $options['shell-aliases']['rs'] = 'rsync';
 
 // Lulz.
-$options['shell-aliases']['unsuck'] = 'pm-disable -y overlay,dashboard,toolbar,shortcut,color,rdf,comment';
+$unsuck_modules = array(
+  'color',
+  'comment',
+  'dashboard',
+  'overlay',
+  'rdf',
+  'toolbar',
+  'serach',
+  'shortcut',
+);
+$unsuck_modules = implode(',', $unsuck_modules);
+$unsuck_command = "pm-disable -y {$unsuck_modules} && drush pm-uninstall -y {$unsuck_modules}";
+$options['shell-aliases']['unsuck'] = $unsuck_command;
+
+// Sandbox.
+$sandbox_modules = array(
+  'admin_menu',
+  'context',
+  'ctools',
+  'devel',
+  'features',
+  'fpa',
+  'module_filter',
+  'shiny',
+  'views',
+);
+$sandbox_modules = implode(',', $sandbox_modules);
+$sandbox_command = "pm-download -y {$sandbox_modules} && drush pm-enable -y {$sandbox_modules},admin_menu_toolbar && drush vset -y admin_theme shiny";
+$options['shell-aliases']['sandbox'] = $sandbox_command;
 
 // Useful for working with makefiles/profiles when you gotta re-run repeatedly ad-infinitum.
 // $options['cache'] = TRUE;
