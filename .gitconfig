@@ -154,6 +154,9 @@
 	# Verbose remotes info.
 	remotes = remote -v
 
+  # Add removed files to the staging area.
+  rmd = "!f() { git rm $(git ls-files --deleted); }; f"
+
   # Show a concise status of the working directory, along with the branch and
   # the number of commits behind and/or ahead.
   s = status --short --branch
