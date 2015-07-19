@@ -31,6 +31,8 @@
       "autocomplete"
       "language-source"
       "language-yaml"
+      "linter-php"
+      "linter-scss-lint"
       "linter-phpcs"
     ]
     themes: [
@@ -39,6 +41,12 @@
     ]
     projectHome: "~/Projects"
     audioBeep: false
+    excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      ".git"
+      ".DS_STORE"
+      ".idea"
+    ]
   "atom-ctags":
     autoBuildTagsWhenActive: true
   linter:
@@ -50,9 +58,11 @@
     subtleLinterErrors: [
       "phpcs"
     ]
+    showErrorPanel: false
   editor:
     invisibles: {}
-    fontSize: 15
+    preferredLineLength: 120
+    showIndentGuide: true
   "linter-jshint":
     jshintExecutablePath: "/usr/local/bin/jshint"
     disableWhenNoJshintrcFileInPath: true
@@ -68,6 +78,18 @@
   "atom-typescript": {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
+  tabs:
+    enableVcsColoring: true
+  "tree-view":
+    hideIgnoredNames: true
+  "symbols-tree-view":
+    autoToggle: true
+".source.ts.tsx":
+  editor:
+    preferredLineLength: 120
+".source.ts":
+  editor:
+    preferredLineLength: 120
 jshint:
   validateOnlyOnSave: true
 minimap:
