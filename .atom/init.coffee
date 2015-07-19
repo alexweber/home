@@ -12,3 +12,6 @@
 #   editor = editorView.getEditor()
 #   if path.extname(editor.getPath()) is '.md'
 #     editor.setSoftWrapped(true)
+
+# Fix for $PATH CLI vs command line on OSX.
+process.env.PATH = ["/usr/local/bin", process.env.PATH].join(":")
