@@ -62,6 +62,9 @@ source $(brew --prefix nvm)/nvm.sh
 # Completion for WP CLI.
 source "$HOME/.init/wp-completion.sh"
 
+# BTSH.
+source "$HOME/Bluetent/btsh/btsh.plugin.zsh"
+
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards.
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
 
