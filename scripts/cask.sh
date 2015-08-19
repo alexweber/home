@@ -30,7 +30,7 @@ brew cask install battle-net
 brew cask install bettertouchtool
 brew cask install boom
 brew cask install ccleaner
-brew cask install cocoarestclient
+# brew cask install cocoarestclient
 brew cask install dash
 brew cask install dosbox
 brew cask install dropbox
@@ -64,11 +64,13 @@ brew cask install multidoge
 brew cask install onepassword
 brew cask install paragon-ntfs
 # brew cask install pref-setter
+brew cask install poedit
 brew cask install phpstorm
 brew cask install pongsaver
 brew cask install screenflow
 brew cask install sequel-pro
 brew cask install skype
+brew cask install slack
 brew cask install smcfancontrol
 # brew cask install sparrow
 # brew cask install steam
