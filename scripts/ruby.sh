@@ -13,5 +13,9 @@ sudo gem update --system
 
 # Install our global gems.
 sudo gem install bundler
+# sudo gem install compass
+sudo gem install github-pages
+sudo gem install jekyll
 sudo gem install mailcatcher
+# sudo gem install sass
 sudo gem install scss-lint
