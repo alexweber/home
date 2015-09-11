@@ -33,18 +33,19 @@
       "linter-phpcs"
       "language-php"
     ]
-    themes: [
-      "seti-ui"
-      "one-dark-syntax"
-    ]
     projectHome: "~/Projects"
     audioBeep: false
     ignoredNames: [
       ".git"
       ".DS_STORE"
       ".idea"
+      ".imdone"
     ]
     excludeVcsIgnoredPaths: false
+    themes: [
+      "atom-material-ui"
+      "one-dark-syntax"
+    ]
   "atom-ctags":
     autoBuildTagsWhenActive: true
   linter:
@@ -67,6 +68,7 @@
     softWrapHangingIndent: 2
     softTabs: false
     softWrapAtPreferredLineLength: true
+    backUpBeforeSaving: true
   "linter-jshint":
     jshintExecutablePath: "/usr/local/bin/jshint"
     disableWhenNoJshintrcFileInPath: true
@@ -100,23 +102,38 @@
     uppercaseColorValues: true
   "file-templates": {}
   "quick-editor": {}
-".source.ts.tsx":
-  editor:
-    preferredLineLength: 120
+  "imdone-atom": {}
+  "file-icons":
+    tabPaneIcon: false
+    coloured: false
+  "one-dark-ui": {}
+  "atom-material-ui":
+    compactTreeView: true
+    depth: true
+    disableAnimations: true
+  docblockr:
+    deep_indent: true
+    spacer_between_sections: true
+  "highlight-selected":
+    onlyHighlightWholeWords: true
+  "status-bar": {}
 ".angular.html.text":
   editor:
     preferredLineLength: 120
     softWrapHangingIndent: 2
+".source.ts.tsx":
+  editor:
+    preferredLineLength: 120
 ".source.ts":
   editor:
     preferredLineLength: 120
-editor:
-  showIndentGuide: true
-  preferredLineLength: 120
-"autocomplete-plus":
-  enableAutoActivation: false
+jshint:
+  validateOnlyOnSave: true
 minimap:
   plugins:
     "git-diff": false
-jshint:
-  validateOnlyOnSave: true
+"autocomplete-plus":
+  enableAutoActivation: false
+editor:
+  showIndentGuide: true
+  preferredLineLength: 120
