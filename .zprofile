@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='subl'
+export VISUAL='subl'
 export PAGER='less'
 
 #
@@ -44,6 +44,9 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+	"${ZDOTDIR:-$HOME}/bin"
+	"${ZDOTDIR:-$HOME}/.composer/vendor/bin"
+	/Applications/MAMP/Library/bin
   $path
 )
 
