@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Install native apps using Homebrew.
 
@@ -30,7 +30,6 @@ brew cask install battle-net
 brew cask install bettertouchtool
 brew cask install boom
 brew cask install ccleaner
-# brew cask install cocoarestclient
 brew cask install dash
 brew cask install dosbox
 brew cask install dropbox
@@ -38,21 +37,15 @@ brew cask install firefox
 brew cask install flash-player
 brew cask install gitter
 brew cask install google-chrome
-brew cask install google-chrome-canary
-# brew cask install google-drive
-# brew cask install google-earth
 brew cask install harvest
 brew cask install hipchat
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install iterm2
 brew cask install java
-brew cask install joinme
 brew cask install kaleidoscope
-# brew cask install knox
 brew cask install lastfm
 brew cask install libreoffice
-# brew cask install linkinus
 brew cask install macdown
 brew cask install mamp
 # brew cask install miro-video-converter
@@ -60,10 +53,8 @@ brew cask install minco
 brew cask install mmex
 brew cask install moom
 brew cask install multidoge
-# brew cask install mysqlworkbench
 brew cask install onepassword
 brew cask install paragon-ntfs
-# brew cask install pref-setter
 brew cask install poedit
 brew cask install phpstorm
 brew cask install pongsaver
@@ -72,37 +63,22 @@ brew cask install sequel-pro
 brew cask install skype
 brew cask install slack
 brew cask install smcfancontrol
-# brew cask install sparrow
-# brew cask install steam
 brew cask install sublime-text
 brew cask install torbrowser
 brew cask install tower
 brew cask install transmission
 brew cask install transmit
-# brew cask install truecrypt
 brew cask install unity-web-player
 brew cask install vagrant
-# brew cask install vienna
 brew cask install virtualbox
 brew cask install vlc
-# brew cask install yandex
 
 # Quick Look plugins.
-brew cask install qlcolorcode
-brew cask install qlstephen
 brew cask install qlmarkdown
 brew cask install quicklook-json
 brew cask install qlprettypatch
 brew cask install quicklook-csv
-brew cask install qlimagesize
-brew cask install webpquicklook
-
-# Install custom Casks.
-brew cask install "~/.init/popcorn-time.rb"
 
 # Remove outdated versions from the cellar.
 brew cleanup
 brew cask cleanup
-
-# Modify Alfred's search scope to include installed Casks.
-brew cask alfred

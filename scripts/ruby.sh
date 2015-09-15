@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Install command-line tools globally using Ruby.
 
@@ -11,11 +11,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Update installed gems.
 sudo gem update --system
 
-# Install our global gems.
+# Install global gems.
 sudo gem install bundler
-# sudo gem install compass
 sudo gem install github-pages
 sudo gem install jekyll
 sudo gem install mailcatcher
-# sudo gem install sass
+sudo gem install tmuxinator
 sudo gem install scss-lint

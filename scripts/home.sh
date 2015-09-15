@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Ask for the administrator password upfront.
 # sudo -v
@@ -15,11 +15,13 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Install Homebrew packages.
 source brew.sh
 
-# Install Bash 4.
-BASHPATH=$(brew --prefix)/bin/bash
-echo $BASHPATH | sudo tee -a /etc/shells
-chsh -s $BASHPATH
-echo $BASH_VERSION # should be 4.x not the old 3.2.X
+# Install ZSH + Prezto.
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+chsh -s /bin/zsh
 
 # Install Homebrew Casks.
 source cask.sh
@@ -33,17 +35,8 @@ source ruby.sh
 # Install Composer packages.
 source composer.sh
 
-# Install PHP extensions.
-source pecl.sh
-
-# Add PHP extensions to MAMP.
-source mamp.sh
-
 # Install Atom plugins.
 source node.sh
-
-# Install Pyton packages.
-source python.sh
 
 # Setup OSX.
 source osx.sh

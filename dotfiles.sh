@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 SOURCE_DIR="$(cd "$(dirname "$0")" > /dev/null; pwd)";
 cd $SOURCE_DIR
@@ -6,16 +6,16 @@ cd $SOURCE_DIR
 git pull origin master;
 
 function doIt() {
-  # Copy the ".bash/private" file only if it doesn't already exist.
-  if [ ! -f ~/.bash/private ]; then
-    cp .bash/private ~/.bash/private
+  # Copy the ".etc/private" file only if it doesn't already exist.
+  if [ ! -f ~/.etc/private ]; then
+    cp .etc/private ~/.etc/private
   fi
 
   # Symlink some config directories.
   symlinked_dirs=(
     .atom
     .drush
-    .WebIde80
+    .WebIde90
   );
   for symlinked_dir in "${symlinked_dirs[@]}"; do
     if ! [[ -L "$HOME/$symlinked_dir" && -d "$HOME/$symlinked_dir" ]]; then
@@ -26,12 +26,12 @@ function doIt() {
     fi
   done;
 
-  rsync --exclude ".atom/" --exclude ".bash/private" --exclude ".drush/" \
-  --exclude ".git/" --exclude ".WebIde80/" --exclude "scripts/" \
-  --exclude "BASH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
+  rsync --exclude ".atom/" --exclude ".etc/private" --exclude ".drush/" \
+  --exclude ".git/" --exclude ".WebIde90/" --exclude "scripts/" \
+  --exclude "ZSH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
   --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;
-  source ~/.bash_profile;
+  source ~/.zshrc;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

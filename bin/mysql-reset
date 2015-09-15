@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # First param is database name.
 DBNAME=$1
 
 # MYSQL_ROOT_USER and MYSQL_ROOT_PASS are defined in the "private" include.
-source "$HOME/.bash/private"
+source "$HOME/.etc/private"
 
 if [ -n "$DBNAME" ]; then
   read -p "Truncate database: $DBNAME? (y/n) " RESP
