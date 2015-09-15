@@ -11,7 +11,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-# Change the value of $COMPUTERNAME in ".bash/private"
+# Change the value of $COMPUTERNAME in ".etc/.private"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "${COMPUTERNAME}"
 sudo scutil --set ComputerName "${COMPUTERNAME}"
 sudo scutil --set HostName "${COMPUTERNAME}"

@@ -3,7 +3,7 @@
 # @TODO symlink certain local module repos (ie: examples for d8)
 
 # Configuration vars defined in the "private" include.
-source "$HOME/.bash/private"
+source "$HOME/.etc/private"
 
 # First param is sandbox name.
 SBNAME=$SBNAME
@@ -90,6 +90,6 @@ if [ -n "$SBNAME" ]; then
 
     open `drush user-login "admin" -l $SANDBOX:8888`
   elif [ "$RESP" = "8" ]; then
-    
+
   fi
 fi
