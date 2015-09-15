@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-# Install fonts Homebrew.
+# Install fonts using Homebrew Cask.
 
 brew tap caskroom/fonts
 

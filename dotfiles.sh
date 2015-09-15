@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 SOURCE_DIR="$(cd "$(dirname "$0")" > /dev/null; pwd)";
 cd $SOURCE_DIR
@@ -15,7 +15,7 @@ function doIt() {
   symlinked_dirs=(
     .atom
     .drush
-    .WebIde80
+    .WebIde90
   );
   for symlinked_dir in "${symlinked_dirs[@]}"; do
     if ! [[ -L "$HOME/$symlinked_dir" && -d "$HOME/$symlinked_dir" ]]; then
@@ -27,11 +27,11 @@ function doIt() {
   done;
 
   rsync --exclude ".atom/" --exclude ".etc/private" --exclude ".drush/" \
-  --exclude ".git/" --exclude ".WebIde80/" --exclude "scripts/" \
+  --exclude ".git/" --exclude ".WebIde90/" --exclude "scripts/" \
   --exclude "ZSH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
   --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;
-  source ~/.bash_profile;
+  source ~/.zshrc;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
