@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # This is just my crappy way of starting my local multicore Solr dev instance :)
 

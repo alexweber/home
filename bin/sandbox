@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # @TODO symlink certain local module repos (ie: examples for d8)
 
