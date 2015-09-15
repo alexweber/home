@@ -16,10 +16,10 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 source brew.sh
 
 # Install Bash 4.
-BASHPATH=$(brew --prefix)/bin/bash
-echo $BASHPATH | sudo tee -a /etc/shells
-chsh -s $BASHPATH
-echo $BASH_VERSION # should be 4.x not the old 3.2.X
+# BASHPATH=$(brew --prefix)/bin/bash
+# echo $BASHPATH | sudo tee -a /etc/shells
+# chsh -s $BASHPATH
+# echo $BASH_VERSION # should be 4.x not the old 3.2.X
 
 # Install Homebrew Casks.
 source cask.sh
