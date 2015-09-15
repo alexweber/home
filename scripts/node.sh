@@ -15,6 +15,7 @@ sudo npm install -g bower
 sudo npm install -g bower-update
 sudo npm install -g cordova
 sudo npm install -g electron-prebuilt
+sudo npm install -g eslint
 sudo npm install -g express
 sudo npm install -g express-generator
 sudo npm install -g firebase-tools
@@ -25,6 +26,7 @@ sudo npm install -g ios-deploy
 sudo npm install -g ios-sim
 sudo npm install -g istanbul
 sudo npm install -g jpegtran
+sudo npm install -g jshint
 sudo npm install -g jspm
 sudo npm install -g karma-cli
 sudo npm install -g knex
