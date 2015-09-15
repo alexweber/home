@@ -37,6 +37,7 @@ sudo npm install -g pixijs-cli
 sudo npm install -g optipng-bin
 sudo npm install -g scss-lint
 sudo npm install -g slush
+sudo npm install -g trash
 sudo npm install -g typescript
 sudo npm install -g webpack
 sudo npm install -g yo
