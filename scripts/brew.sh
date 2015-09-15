@@ -32,7 +32,9 @@ brew install couchdb
 brew install ctags
 brew install dtrx
 brew install git
+brew install graphicsmagick
 brew install hub
+brew install imagemagick
 brew install libpng
 brew install libsass
 brew install mongodb
