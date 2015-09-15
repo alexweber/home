@@ -28,10 +28,10 @@ fi
 brew install findutils
 
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+# brew install gnu-sed --with-default-names
 
 # Install Bash 4.
-brew install bash
+# brew install bash
 
 # Install Bash completion.
 #brew install bash-completion
@@ -39,61 +39,49 @@ brew install bash
 # latest from versions:
 # github.com/Homebrew/homebrew/blob/master/Library/Formula/bash-completion.rb#L3-L4
 # Unlink the old one to be sure.
-brew uninstall bash-completion
-brew install homebrew/versions/bash-completion2
+# brew uninstall bash-completion
+# brew install homebrew/versions/bash-completion2
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
 # brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+# brew install homebrew/dupes/grep
+# brew install homebrew/dupes/openssh
+# brew install homebrew/dupes/screen
 
 # Install other useful binaries.
-brew install ack
+# brew install ack
 brew install android-sdk
-brew install autoconf
-brew install automake
+# brew install autoconf
+# brew install automake
 brew install bfg
 brew install colordiff
 brew install composer
 brew install couchdb
 brew install ctags
-brew install curl
 # brew install dos2unix
 brew install dtrx
-brew install gettext
 brew install git
-brew install graphicsmagick
 brew install hub
-brew install icu4c
-brew install imagemagick
 brew install libpng
 brew install libsass
-brew install libxml2
 brew install mongodb
 brew install nvm
 brew install openssh
 brew install openssl
-brew install p7zip
-# brew install pcre
 brew install phantomjs
 brew install homebrew/php/php53
-# brew install homebrew/php/php53-xdebug
 brew install homebrew/php/php53-jsmin
 brew install homebrew/php/php53-xhprof
-brew install homebrew/php/php-cs-fixer
-brew install pkg-config
 brew install qcachegrind
 brew install rename
-# brew install solr36
 brew install ssh-copy-id
+brew install tmux
 brew install tree
 brew install wget
 brew install wp-cli
-brew install zopfli
 
 # Use latest rsync rather than out-dated OS X rsync install separately from the
 # main formulae list to fix gh-19.
