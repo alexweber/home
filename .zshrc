@@ -73,6 +73,12 @@ function mkd() {
   mkdir -p "$@" && cd "$_";
 }
 
+## Create a new directory, enter it and clone a repo there.
+function gi() {
+  mkdir -p "$1" && cd "$1";
+  git clone "$2" .
+}
+
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
 # the `.git` directory, listing directories first. The output gets piped into
 # `less` with options to preserve color and line numbers, unless the output is
