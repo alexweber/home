@@ -12,14 +12,6 @@ fi
 
 # Customize to your needs...
 
-# Easier folder navigation.
-# alias ..="cd .."
-# alias ...="cd ../.."
-# alias ....="cd ../../.."
-# alias .....="cd ../../../.."
-# alias ......="cd ../../../../.."
-# alias .......="cd ../../../../../.."
-
 # Laziness FTW.
 alias g="git"
 alias h="history"
