@@ -3,7 +3,7 @@
 # Install command-line tools globally using Composer.
 
 composer self-update
-composer global require "drush/drush:dev-master"
+composer global require "drush/drush=~6.0"
 composer global require "phpunit/phpunit=4.4.*"
 composer global require	"drupal/drupal-extension=~3.0"
 composer global require "behat/behat=*"
