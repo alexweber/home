@@ -28,7 +28,7 @@ function doIt() {
 
   rsync --exclude ".atom/" --exclude ".etc/private" --exclude ".drush/" \
   --exclude ".git/" --exclude ".WebIde80/" --exclude "scripts/" \
-  --exclude "BASH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
+  --exclude "ZSH.md" --exclude "dotfiles.sh" --exclude "GIT.md" \
   --exclude "LICENSE" --exclude "README.md" \
   -avh --no-perms . ~;
   source ~/.bash_profile;
