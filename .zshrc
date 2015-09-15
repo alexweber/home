@@ -26,6 +26,12 @@ alias h="history"
 alias s="subl"
 alias d="drush"
 
+# TMUX
+alias tma='tmux attach -d -t'
+alias tmn='tmux new -s $(basename $(pwd))'
+alias tml='tmux list-sessions'
+alias tmk='tmux kill-session -t'
+
 # Drush.
 alias dun="drush pm-uninstall --yes"
 alias dup="drush updatedb --yes"
