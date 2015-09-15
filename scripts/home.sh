@@ -33,9 +33,6 @@ source ruby.sh
 # Install Composer packages.
 source composer.sh
 
-# Add PHP extensions to MAMP.
-source mamp.sh
-
 # Install Atom plugins.
 source node.sh
 

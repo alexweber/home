@@ -26,7 +26,6 @@ The following scripts are available in the "scripts" folder:
 * `cask.sh` Install native OS X apps using Homebrew Cask
 * `composer.sh` Install global Composer PHP packages
 * `home.sh` __Wrapper around the all of the other scripts; use this to set up a new Mac__
-* `mamp.sh` Add PHP extensions to MAMP
 * `node.sh` Install global Node.js packages
 * `osx.sh` Sets up sensible defaults for OS X settings and a couple other cool tweaks
 * `ruby.sh` Install global Ruby gems
