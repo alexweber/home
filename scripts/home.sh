@@ -33,17 +33,11 @@ source ruby.sh
 # Install Composer packages.
 source composer.sh
 
-# Install PHP extensions.
-source pecl.sh
-
 # Add PHP extensions to MAMP.
 source mamp.sh
 
 # Install Atom plugins.
 source node.sh
-
-# Install Pyton packages.
-source python.sh
 
 # Setup OSX.
 source osx.sh
