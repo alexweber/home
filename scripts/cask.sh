@@ -37,6 +37,7 @@ brew cask install firefox
 brew cask install flash-player
 brew cask install gitter
 brew cask install google-chrome
+brew cask install google-chrome-canary
 brew cask install harvest
 brew cask install hipchat
 brew cask install imagealpha
