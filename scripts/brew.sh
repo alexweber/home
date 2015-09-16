@@ -49,6 +49,7 @@ brew install tmux
 brew install tree
 brew install wget
 brew install wp-cli
+brew install z
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
