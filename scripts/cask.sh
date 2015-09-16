@@ -67,6 +67,7 @@ brew cask install smcfancontrol
 brew cask install sublime-text
 brew cask install torbrowser
 brew cask install tower
+brew cask install track-o-bot
 brew cask install transmission
 brew cask install transmit
 brew cask install unity-web-player
