@@ -117,23 +117,23 @@
   "highlight-selected":
     onlyHighlightWholeWords: true
   "status-bar": {}
+".source.ts.tsx":
+  editor:
+    preferredLineLength: 120
 ".angular.html.text":
   editor:
     preferredLineLength: 120
     softWrapHangingIndent: 2
-".source.ts.tsx":
-  editor:
-    preferredLineLength: 120
 ".source.ts":
   editor:
     preferredLineLength: 120
-jshint:
-  validateOnlyOnSave: true
-minimap:
-  plugins:
-    "git-diff": false
-"autocomplete-plus":
-  enableAutoActivation: false
 editor:
   showIndentGuide: true
   preferredLineLength: 120
+"autocomplete-plus":
+  enableAutoActivation: false
+minimap:
+  plugins:
+    "git-diff": false
+jshint:
+  validateOnlyOnSave: true
