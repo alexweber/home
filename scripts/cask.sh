@@ -29,10 +29,13 @@ brew cask install appzapper
 brew cask install battle-net
 brew cask install bettertouchtool
 brew cask install boom
+brew cask install caffeine
 brew cask install ccleaner
+brew cask install chitchat
 brew cask install dash
 brew cask install dosbox
 brew cask install dropbox
+brew cask install fantastical
 brew cask install firefox
 brew cask install flash-player
 brew cask install gitter
@@ -42,13 +45,16 @@ brew cask install harvest
 brew cask install hipchat
 brew cask install imagealpha
 brew cask install imageoptim
+brew cask install ionic-lab
 brew cask install iterm2
 brew cask install java
 brew cask install kaleidoscope
 brew cask install lastfm
 brew cask install libreoffice
 brew cask install macdown
+brew cask install mailbox
 brew cask install mamp
+brew cask install menumeters
 # brew cask install miro-video-converter
 brew cask install minco
 brew cask install mmex
@@ -64,7 +70,11 @@ brew cask install sequel-pro
 brew cask install skype
 brew cask install slack
 brew cask install smcfancontrol
+brew cask install spotify
+brew cask install sqlitebrowser
 brew cask install sublime-text
+# brew cask install texturepacker
+brew cask install today-scripts
 brew cask install torbrowser
 brew cask install tower
 brew cask install track-o-bot
@@ -74,6 +84,7 @@ brew cask install unity-web-player
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
+brew cask install xguardian
 
 # Quick Look plugins.
 brew cask install qlmarkdown
