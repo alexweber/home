@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 #
-# Private bash configuration.
+# Private shell configuration variables.
 #
 # Use this file to store private configuration required by some of the other
 # scripts. Once you modify it, run `git update-index --assume-unchanged` on it
