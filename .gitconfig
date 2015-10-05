@@ -21,8 +21,8 @@
   # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
   precomposeunicode = false
 
-  # Use Sublime Text as the default editor.
-  editor = subl
+  # Use nano as the default editor.
+  editor = nano
 
   # Don't mess with line endings when checking out files, but fix files with
   # CRLF endings introduced accidentally.
