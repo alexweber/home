@@ -10,7 +10,7 @@ DEST=$2
 source "$HOME/.etc/private"
 
 if [ -n "$DBNAME" ]; then
-  read -p "Dump database: $DBNAME? (y/n) " RESP
+  vared -p "Dump database: $DBNAME? (y/n) " -c RESP
 
   if [ -n "$DEST" ]; then
     DEST=$DBNAME

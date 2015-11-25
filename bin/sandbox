@@ -9,7 +9,7 @@ source "$HOME/.etc/private"
 SBNAME=$SBNAME
 
 if [ -n "$SBNAME" ]; then
-  read -p "Select Drupal version: (7/8) " RESP
+  vared -p "Select Drupal version: (7/8) " -c RESP
 
   if [ "$RESP" = "7" ]; then
     # Directory name.

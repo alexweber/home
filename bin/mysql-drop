@@ -6,7 +6,7 @@ DBNAME=$1
 # MYSQL_ROOT_USER and MYSQL_ROOT_PASS are defined in the "private" include.
 source "$HOME/.etc/private"
 
-if [ -n "$DBNAME" ]; then
+if [ "$DBNAME" ]; then
   DBEXISTS=$(mysql -u$MYSQL_ROOT_USER -p"$MYSQL_ROOT_PASS" --batch --skip-column-names -e "SHOW DATABASES LIKE '"$DBNAME"';" | grep "$DBNAME" > /dev/null; echo "$?");
 
   if [ $DBEXISTS -eq 0 ];then

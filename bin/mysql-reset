@@ -7,7 +7,7 @@ DBNAME=$1
 source "$HOME/.etc/private"
 
 if [ -n "$DBNAME" ]; then
-  read -p "Truncate database: $DBNAME? (y/n) " RESP
+  vared -p "Truncate database: $DBNAME? (y/n) " -c RESP
 
   if [ "$RESP" = "y" ]; then
     DBEXISTS=$(mysql -u$MYSQL_ROOT_USER -p"$MYSQL_ROOT_PASS" --batch --skip-column-names -e "SHOW DATABASES LIKE '"$DBNAME"';" | grep "$DBNAME" > /dev/null; echo "$?");
