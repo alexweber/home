@@ -119,8 +119,3 @@ export HISTIGNORE="ls:cd:cd:ll:ls:la:history -:pwd:exit:date:* --help";
 # Make new shells get the history lines from all previous shells instead of the
 # default "last window closed" history.
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-
-# Docker.
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH="$HOME/.boot2docker/certs/boot2docker-vm"
