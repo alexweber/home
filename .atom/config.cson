@@ -32,6 +32,7 @@
       "language-yaml"
       "linter-phpcs"
       "language-php"
+      "color-picker"
     ]
     projectHome: "~/Projects"
     audioBeep: false
@@ -57,10 +58,10 @@
     subtleLinterErrors: [
       "phpcs"
     ]
-    showErrorPanel: false
     lintOnFly: false
     showErrorTabProject: false
     showErrorTabFile: false
+    showErrorPanel: false
   editor:
     invisibles: {}
     preferredLineLength: 120
@@ -90,6 +91,7 @@
   "tree-view":
     hideIgnoredNames: true
   "symbols-tree-view":
+    zAutoHideTypes: "property variable class"
     autoToggle: true
   "linter-php": {}
   "linter-scss-lint":
@@ -104,26 +106,36 @@
   "quick-editor": {}
   "imdone-atom": {}
   "file-icons":
-    tabPaneIcon: false
     coloured: false
+    tabPaneIcon: false
   "one-dark-ui": {}
   "atom-material-ui":
-    compactTreeView: true
     depth: true
     disableAnimations: true
+    panelContrast: true
+    compactTreeView: true
+    ui:
+      disableAnimations: true
+    treeView:
+      compactTreeView: true
+    panels:
+      panelContrast: true
+      depth: true
   docblockr:
     deep_indent: true
     spacer_between_sections: true
   "highlight-selected":
     onlyHighlightWholeWords: true
   "status-bar": {}
-".source.ts.tsx":
-  editor:
-    preferredLineLength: 120
+  "project-manager": {}
+  "autoclose-html": {}
 ".angular.html.text":
   editor:
     preferredLineLength: 120
     softWrapHangingIndent: 2
+".source.ts.tsx":
+  editor:
+    preferredLineLength: 120
 ".source.ts":
   editor:
     preferredLineLength: 120
