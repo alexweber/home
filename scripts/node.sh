@@ -32,6 +32,7 @@ sudo npm install -g karma-cli
 sudo npm install -g knex
 sudo npm install -g learnyounode
 sudo npm install -g mocha
+sudo npm install -g node-inspector
 sudo npm install -g npm-check-updates
 sudo npm install -g pixijs-cli
 sudo npm install -g optipng-bin
