@@ -19,3 +19,84 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
+'.source.js':
+  'Taz Form Controller':
+    'prefix': 'tazctrl'
+    'body': """
+angular.module('duels.${1:foo}.form', [
+  'taz',
+  'taz.form'
+])
+
+.controller('${1:Foo}FormCtrl', function (\$controller) {
+  var vm = this;
+  vm.translate = [];
+
+  vm.origData = null;
+  vm.data = null;
+  vm.dataService = null;
+
+  // vm.saveCallback = function (input) {
+  //   return \$q.when(true);
+  // };
+  //
+  // vm.cancelCallback = function () {
+  //
+  // };
+
+  \$controller('TazFormCtrl', { \$scope: this });
+});
+"""
+
+  'Taz Firebase Service':
+    'prefix': 'tazsrv'
+    'body': """
+function ${1:fooService}(tazService) {
+  angular.extend(${1:fooService}.prototype, tazService);
+  var vm = this;
+  vm.rootUrl = '${2:bars}';
+}
+
+angular.module('duels.${1:foo}.service', [
+  'taz',
+  'taz.service'
+])
+
+.service('${1:fooService}', ['tazService', ${1:fooService}]);
+"""
+
+  'Karma describe test':
+    'prefix': 'desc'
+    'body': """
+describe('${1:something}', function () {
+
+  beforeEach(function () {
+    sinon.sandbox.create();
+  });
+
+  afterEach(function () {
+    sinon.restore();
+  });
+
+});
+"""
+
+  'JSON log':
+    'prefix': 'jlog'
+    'body': """
+console.log(JSON.stringify(${1:foo}));
+"""
+
+  'Karma it test':
+    'prefix': 'it'
+    'body': """
+it('${1:can do something}', function () {
+  ${2}
+});
+"""
+
+  'JSON log':
+    'prefix': 'jlog'
+    'body': """
+console.log(JSON.stringify(${1:foo}));
+"""
