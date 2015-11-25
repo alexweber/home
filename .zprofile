@@ -47,6 +47,7 @@ path=(
 	"${ZDOTDIR:-$HOME}/bin"
 	"${ZDOTDIR:-$HOME}/.composer/vendor/bin"
 	/Applications/MAMP/Library/bin
+	"${ZDOTDIR:-$HOME}/Developer/gsutil"
   $path
 )
 
