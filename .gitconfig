@@ -148,8 +148,11 @@
   # View alternative, more detailed log, description and graph of latest commits.
   ld = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
 
-  # Shortcut to pull master from origin.
+  # Shortcuts to push/pull to/from dev/master on origin.
+  pod = pull origin dev
   pom = pull origin master
+  pud = pull origin dev
+  pum = pull origin master
 
 	# Verbose remotes info.
 	remotes = remote -v
@@ -178,3 +181,6 @@
 
 	# Undo push.
   udp = push -f origin HEAD^:master
+
+  # Who added a file.
+  who = log --diff-filter=A --
