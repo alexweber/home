@@ -33,11 +33,13 @@ brew cask install caffeine
 brew cask install ccleaner
 brew cask install chitchat
 brew cask install dash
+brew cask install dockertoolbox
 brew cask install dosbox
 brew cask install dropbox
 brew cask install fantastical
 brew cask install firefox
 brew cask install flash-player
+brew cask install github-desktop
 brew cask install gitter
 brew cask install google-chrome
 brew cask install google-chrome-canary
@@ -51,6 +53,8 @@ brew cask install java
 brew cask install kaleidoscope
 brew cask install lastfm
 brew cask install libreoffice
+brew cask install logitech-control-center
+brew cask install logitech-options
 brew cask install macdown
 brew cask install mailbox
 brew cask install mamp
