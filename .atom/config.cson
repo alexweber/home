@@ -29,7 +29,6 @@
       "feedback"
       "autocomplete"
       "language-source"
-      "language-yaml"
       "linter-phpcs"
       "language-php"
       "color-picker"
@@ -79,7 +78,9 @@
   "linter-phpcs":
     standard: "/Users/alex/Bluetent/code-sniffer/Drupal"
   "autocomplete-plus": {}
-  minimap: {}
+  minimap:
+    plugins:
+      "highlight-selected": true
   "tool-bar":
     position: "Left"
     visible: false
