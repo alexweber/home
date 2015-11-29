@@ -18,6 +18,7 @@ sudo npm install -g electron-prebuilt
 sudo npm install -g eslint
 sudo npm install -g express
 sudo npm install -g express-generator
+sudo npm install -g firebase-bolt
 sudo npm install -g firebase-tools
 sudo npm install -g grunt-cli
 sudo npm install -g gulp
