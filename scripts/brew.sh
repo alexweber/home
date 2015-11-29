@@ -31,6 +31,7 @@ brew install composer
 brew install couchdb
 brew install ctags
 brew install dtrx
+brew install fasd
 brew install git
 brew install graphicsmagick
 brew install hub
@@ -49,7 +50,6 @@ brew install tmux
 brew install tree
 brew install wget
 brew install wp-cli
-brew install z
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
