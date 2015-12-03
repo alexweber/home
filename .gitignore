@@ -1,5 +1,6 @@
 # OS files.
 .DS_Store
+.DS_STORE
 __MACOSX
 
 # Files that might appear on external disks.
@@ -22,3 +23,7 @@ __MACOSX
 .atom/projects.cson
 .atom/local-history
 .atom/.apm
+
+# Ctags.
+.ctags*
+.tags*
