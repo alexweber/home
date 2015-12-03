@@ -31,23 +31,27 @@
       "language-source"
       "linter-phpcs"
       "language-php"
-      "color-picker"
+      "symbols-view"
+      "autocomplete-atom-api"
     ]
     projectHome: "~/Projects"
     audioBeep: false
     ignoredNames: [
       ".git"
-      ".DS_STORE"
+      ".DS_S*"
       ".idea"
       ".imdone"
+      ".tags*"
+      "tags"
     ]
     excludeVcsIgnoredPaths: false
-    themes: [
-      "atom-material-ui"
-      "one-dark-syntax"
-    ]
   "atom-ctags":
     autoBuildTagsWhenActive: true
+    GotoSymbolKey: [
+      "meta"
+    ]
+    buildTimeout: 10000
+    cmdArgs: "--exclude=.git --exclude=bower_components --exclude=coverage --exclude=docs --exclude=node_modules"
   linter:
     lintOnEditorFocus: false
     showInfoMessages: true
@@ -81,9 +85,7 @@
   minimap:
     plugins:
       "highlight-selected": true
-  "tool-bar":
-    position: "Left"
-    visible: false
+  "tool-bar": {}
   "atom-typescript": {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
@@ -92,7 +94,7 @@
   "tree-view":
     hideIgnoredNames: true
   "symbols-tree-view":
-    zAutoHideTypes: "property variable class"
+    zAutoHideTypes: "property variable class object boolean string integer array"
     autoToggle: true
   "linter-php": {}
   "linter-scss-lint":
@@ -105,23 +107,12 @@
     uppercaseColorValues: true
   "file-templates": {}
   "quick-editor": {}
-  "imdone-atom": {}
+  "imdone-atom":
+    openIn: {}
   "file-icons":
     coloured: false
     tabPaneIcon: false
   "one-dark-ui": {}
-  "atom-material-ui":
-    depth: true
-    disableAnimations: true
-    panelContrast: true
-    compactTreeView: true
-    ui:
-      disableAnimations: true
-    treeView:
-      compactTreeView: true
-    panels:
-      panelContrast: true
-      depth: true
   docblockr:
     deep_indent: true
     spacer_between_sections: true
@@ -130,23 +121,59 @@
   "status-bar": {}
   "project-manager": {}
   "autoclose-html": {}
+  "atom-beautify":
+    analytics: false
+    _loggerLevel: "error"
+    js_end_with_comma: true
+    js_end_with_newline: true
+    js_indent_with_tabs: false
+    js_space_after_anon_function: true
+  pigments: {}
+  "symbols-view": {}
+  "atom-material-ui":
+    fonts:
+      fontSize: 15
+    ui:
+      panelContrast: true
+    tabs: {}
+    treeView:
+      compactList: true
+    colors:
+      abaseColor:
+        red: 80
+        green: 149
+        blue: 57
+        alpha: 1
+  "recent-files-fuzzy-finder":
+    restoreSession: true
+  "tool-bar-almighty": {}
+  "dark-flat-ui":
+    accentColor: "green"
+".source.ts.tsx":
+  editor:
+    preferredLineLength: 120
 ".angular.html.text":
   editor:
     preferredLineLength: 120
     softWrapHangingIndent: 2
-".source.ts.tsx":
+".handlebars.html.text":
   editor:
     preferredLineLength: 120
+    softWrapHangingIndent: 2
+".ini.source":
+  editor:
+    preferredLineLength: 120
+    softWrapHangingIndent: 2
 ".source.ts":
   editor:
     preferredLineLength: 120
-editor:
-  showIndentGuide: true
-  preferredLineLength: 120
-"autocomplete-plus":
-  enableAutoActivation: false
+jshint:
+  validateOnlyOnSave: true
 minimap:
   plugins:
     "git-diff": false
-jshint:
-  validateOnlyOnSave: true
+"autocomplete-plus":
+  enableAutoActivation: false
+editor:
+  showIndentGuide: true
+  preferredLineLength: 120
