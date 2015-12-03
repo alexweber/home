@@ -1,4 +1,7 @@
 --exclude=.git
+--exclude=bower_components
+--exclude=coverage
+--exclude=docs
 --exclude=node_modules
 
 --langdef=js
