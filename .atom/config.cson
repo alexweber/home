@@ -149,6 +149,7 @@
   "tool-bar-almighty": {}
   "dark-flat-ui":
     accentColor: "green"
+  "recent-finder": {}
 ".source.ts.tsx":
   editor:
     preferredLineLength: 120
@@ -167,6 +168,10 @@
 ".source.ts":
   editor:
     preferredLineLength: 120
+".bolt.source":
+  editor:
+    preferredLineLength: 120
+    softWrapHangingIndent: 2
 jshint:
   validateOnlyOnSave: true
 minimap:
