@@ -99,3 +99,8 @@ function cconv() {
   curl -s "http://www.google.com/finance/converter?a=$1&from=$2&to=$3&hl=es" |  sed '/res/!d;s/<[^>]*>//g';
 }
 
+# The next line updates PATH for the Google Cloud SDK.
+source '~/Developer/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '~/Developer/google-cloud-sdk/completion.zsh.inc'
