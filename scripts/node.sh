@@ -14,6 +14,7 @@ sudo npm install -g babel
 sudo npm install -g bower
 sudo npm install -g bower-update
 sudo npm install -g cordova
+sudo npm install -g dockerlint
 sudo npm install -g electron-prebuilt
 sudo npm install -g eslint
 sudo npm install -g express
