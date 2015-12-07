@@ -13,10 +13,12 @@ fi
 # Customize to your needs...
 
 # Laziness FTW.
+alias a="atom"
 alias g="git"
 alias h="history"
 alias s="subl"
 alias d="drush"
+alias dm="docker-machine"
 
 # TMUX
 alias tma='tmux attach -d -t'
