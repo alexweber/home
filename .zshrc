@@ -100,7 +100,7 @@ function cconv() {
 }
 
 # The next line updates PATH for the Google Cloud SDK.
-source '~/Developer/google-cloud-sdk/path.zsh.inc'
+source '/Users/alex/Developer/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
-source '~/Developer/google-cloud-sdk/completion.zsh.inc'
+source '/Users/alex/Developer/google-cloud-sdk/completion.zsh.inc'
