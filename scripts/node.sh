@@ -13,6 +13,7 @@ sudo npm install -g aurelia-cli
 sudo npm install -g babel
 sudo npm install -g bower
 sudo npm install -g bower-update
+sudo npm install -g coffee-script
 sudo npm install -g cordova
 sudo npm install -g dockerlint
 sudo npm install -g electron-prebuilt
