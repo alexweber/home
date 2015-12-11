@@ -19,6 +19,7 @@ __MACOSX
 .drush/*.aliases.drushrc.php
 
 # Atom packages.
+.atom/.apm
 .atom/packages
 .atom/projects.cson
 .atom/local-history
