@@ -20,10 +20,10 @@ __MACOSX
 
 # Atom packages.
 .atom/.apm
+.atom/blob-store
+.atom/local-history
 .atom/packages
 .atom/projects.cson
-.atom/local-history
-.atom/.apm
 
 # Ctags.
 .ctags*
