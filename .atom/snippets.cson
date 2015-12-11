@@ -65,8 +65,8 @@ angular.module('duels.${1:foo}.service', [
 .service('${1:fooService}', ['tazService', ${1:fooService}]);
 """
 
-  'Karma describe test':
-    'prefix': 'desc'
+  'Karma describe test (es5)':
+    'prefix': 'descc'
     'body': """
 describe('${1:something}', function () {
 
@@ -75,6 +75,22 @@ describe('${1:something}', function () {
   });
 
   afterEach(function () {
+    sinon.restore();
+  });
+
+});
+"""
+
+  'Karma describe test (es6)':
+    'prefix': 'desc'
+    'body': """
+describe('${1:something}', () => {
+
+  beforeEach(() => {
+    sinon.sandbox.create();
+  });
+
+  afterEach(() => {
     sinon.restore();
   });
 
@@ -95,8 +111,11 @@ it('${1:can do something}', function () {
 });
 """
 
-  'JSON log':
-    'prefix': 'jlog'
+
+  'Karma it test (es6)':
+    'prefix': 'it'
     'body': """
-console.log(JSON.stringify(${1:foo}));
+it('${1:can do something}', () => {
+  ${2}
+});
 """
