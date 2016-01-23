@@ -32,7 +32,6 @@
       "linter-phpcs"
       "language-php"
       "symbols-view"
-      "autocomplete-atom-api"
     ]
     projectHome: "~/Projects"
     audioBeep: false
@@ -53,7 +52,7 @@
     buildTimeout: 10000
     cmdArgs: "--exclude=.git --exclude=bower_components --exclude=coverage --exclude=docs --exclude=node_modules"
   linter:
-    lintOnEditorFocus: false
+    lintOnEditorFocus: true
     showInfoMessages: true
     statusBar: "Show error of the selected line"
     lintOnChange: false
@@ -73,6 +72,7 @@
     softTabs: false
     softWrapAtPreferredLineLength: true
     backUpBeforeSaving: true
+    tabType: "soft"
   "linter-jshint":
     jshintExecutablePath: "/usr/local/bin/jshint"
     disableWhenNoJshintrcFileInPath: true
@@ -161,14 +161,14 @@
   editor:
     preferredLineLength: 120
     softWrapHangingIndent: 2
-".ini.source":
-  editor:
-    preferredLineLength: 120
-    softWrapHangingIndent: 2
 ".source.ts":
   editor:
     preferredLineLength: 120
 ".bolt.source":
+  editor:
+    preferredLineLength: 120
+    softWrapHangingIndent: 2
+".ini.source":
   editor:
     preferredLineLength: 120
     softWrapHangingIndent: 2
