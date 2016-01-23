@@ -12,16 +12,14 @@ sudo npm install -g add-cors-to-couchdb
 sudo npm install -g aurelia-cli
 sudo npm install -g babel
 sudo npm install -g bower
-sudo npm install -g bower-update
 sudo npm install -g coffee-script
 sudo npm install -g cordova
 sudo npm install -g dockerlint
 sudo npm install -g electron-prebuilt
 sudo npm install -g eslint
-sudo npm install -g express
-sudo npm install -g express-generator
 sudo npm install -g firebase-bolt
 sudo npm install -g firebase-tools
+sudo npm install -g gh-home
 sudo npm install -g grunt-cli
 sudo npm install -g gulp
 sudo npm install -g ionic
