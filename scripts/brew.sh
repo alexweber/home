@@ -48,7 +48,6 @@ brew install qcachegrind
 brew install ssh-copy-id
 brew install tmux
 brew install tree
-brew install wget
 brew install wp-cli
 
 # Install Node.js. Note: this installs `npm` too, using the recommended

@@ -89,8 +89,11 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # Drupal 7.
-export PATH=/Applications/MAMP/bin/php/php5.3.29/bin:$PATH
-export DRUSH_PHP=/Applications/MAMP/bin/php/php5.3.29/bin/php
+#export PATH=/Applications/MAMP/bin/php/php5.3.29/bin:$PATH
+#export DRUSH_PHP=/Applications/MAMP/bin/php/php5.3.29/bin/php
+
+export PATH=/Applications/MAMP/bin/php/php5.6.10/bin:$PATH
+export DRUSH_PHP=/Applications/MAMP/bin/php/php5.6.10/bin/php
 
 # Drupal 8.
 #export PATH=/Applications/MAMP/bin/php/php5.4.33/bin:$PATH

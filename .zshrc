@@ -21,6 +21,9 @@ alias d="drush"
 alias dm="docker-machine"
 alias gh="gh-home"
 
+# BFG
+alias bfg='java -jar ~/Developer/bfg.jar'
+
 # TMUX
 alias tma='tmux attach -d -t'
 alias tmn='tmux new -s $(basename $(pwd))'
@@ -30,6 +33,9 @@ alias tmk='tmux kill-session -t'
 # Drush.
 alias dun="drush pm-uninstall --yes"
 alias dup="drush updatedb --yes"
+
+# Pantheon.
+# alias terminus="$HOME/pantheon-cli/bin/terminus"
 
 # PHP Code Sniffer for Drupal.
 # alias codercs="phpcs --standard=~/.composer/vendor/drupal/coder/coder_sniffer/Drupal/ --extensions=php,module,inc,install,test,profile,theme --encoding=utf-8 --colors"
@@ -116,3 +122,9 @@ source '/Users/alex/Developer/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/alex/Developer/google-cloud-sdk/completion.zsh.inc'
+
+# PHP.
+#[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
+# Ruby.
+eval "$(rbenv init -)"
