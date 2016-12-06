@@ -19,20 +19,37 @@ alias h="history"
 alias s="subl"
 alias d="drush"
 alias dm="docker-machine"
-alias gh="gh-home"
+#alias gh="gh-home"
+alias gt="gittower"
+alias ws="webstorm"
 
 # BFG
 alias bfg='java -jar ~/Developer/bfg.jar'
 
 # TMUX
-alias tma='tmux attach -d -t'
-alias tmn='tmux new -s $(basename $(pwd))'
-alias tml='tmux list-sessions'
-alias tmk='tmux kill-session -t'
+#alias tma='tmux attach -d -t'
+#alias tmn='tmux new -s $(basename $(pwd))'
+#alias tml='tmux list-sessions'
+#alias tmk='tmux kill-session -t'
 
 # Drush.
 alias dun="drush pm-uninstall --yes"
 alias dup="drush updatedb --yes"
+
+# Include Drush bash customizations.
+if [ -f "~/.drush/drush.bashrc" ] ; then
+  source ~/.drush/drush.bashrc
+fi
+
+# Include Drush completion.
+if [ -f "~/.drush/drush.complete.sh" ] ; then
+  source ~/.drush/drush.complete.sh
+fi
+
+# Include Drush prompt customizations.
+if [ -f "~/.drush/drush.prompt.sh" ] ; then
+  source ~/.drush/drush.prompt.sh
+fi
 
 # Pantheon.
 # alias terminus="$HOME/pantheon-cli/bin/terminus"
@@ -75,7 +92,7 @@ alias usd="cconv 1 usd brl"
 alias eur="cconv 1 eur brl"
 
 # Create a new MySQL database.
-# alias mc="mysql-create"
+alias mc="mysql-create"
 
 # Truncate a MySQL database.
 # alias mr="mysql-reset"
@@ -116,15 +133,3 @@ function pk() {
 function cconv() {
   curl -s "http://www.google.com/finance/converter?a=$1&from=$2&to=$3&hl=es" |  sed '/res/!d;s/<[^>]*>//g';
 }
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/alex/Developer/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/alex/Developer/google-cloud-sdk/completion.zsh.inc'
-
-# PHP.
-#[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
-
-# Ruby.
-eval "$(rbenv init -)"

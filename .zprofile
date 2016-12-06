@@ -44,10 +44,10 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
-	"${ZDOTDIR:-$HOME}/bin"
-	"${ZDOTDIR:-$HOME}/.composer/vendor/bin"
-	/Applications/MAMP/Library/bin
-	"${ZDOTDIR:-$HOME}/Developer/gsutil"
+  "${ZDOTDIR:-$HOME}/bin"
+  "${ZDOTDIR:-$HOME}/.composer/vendor/bin"
+  /Applications/MAMP/Library/bin
+  "${ZDOTDIR:-$HOME}/Developer/gsutil"
   $path
 )
 
@@ -85,32 +85,28 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 
 # NVM.
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# export NVM_DIR=~/.nvm
+# source $(brew --prefix nvm)/nvm.sh
 
-# Drupal 7.
+# Drupal.
 #export PATH=/Applications/MAMP/bin/php/php5.3.29/bin:$PATH
 #export DRUSH_PHP=/Applications/MAMP/bin/php/php5.3.29/bin/php
 
 export PATH=/Applications/MAMP/bin/php/php5.6.10/bin:$PATH
 export DRUSH_PHP=/Applications/MAMP/bin/php/php5.6.10/bin/php
 
-# Drupal 8.
-#export PATH=/Applications/MAMP/bin/php/php5.4.33/bin:$PATH
-#export DRUSH_PHP=/Applications/MAMP/bin/php/php5.4.33/bin/php
-
 # Android Dev
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # Keep a reasonably long history.
-# export HISTSIZE=4096;
-export HISTSIZE=8192;
+export HISTSIZE=4096;
+# export HISTSIZE=8192;
 
 # Keep even more history lines inside the file, so we can still look up
 # previous commands without needlessly cluttering the current shell's history.
-# export HISTFILESIZE=16384;
-export HISTFILESIZE=32768;
+export HISTFILESIZE=16384;
+# export HISTFILESIZE=32768;
 
 # When executing the same command twice or more in a row, only store it once.
 # export HISTCONTROL=ignoredups;
@@ -122,4 +118,4 @@ export HISTIGNORE="ls:cd:cd:ll:ls:la:history -:pwd:exit:date:* --help";
 
 # Make new shells get the history lines from all previous shells instead of the
 # default "last window closed" history.
-export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+# export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"

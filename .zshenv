@@ -15,10 +15,5 @@ fi
 #   complete -o default -o nospace -F _git g;
 # fi;
 
-# If we have found drush.complete.sh, then source it.
-# if [ -f "$HOME/.composer/vendor/drush/drush/drush.complete.sh" ] ; then
-#   source "$HOME/.composer/vendor/drush/drush/drush.complete.sh"
-# fi
-
 # BTSH.
 source "$HOME/Bluetent/btsh/btsh.plugin.zsh"
