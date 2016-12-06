@@ -185,3 +185,7 @@
 
   # Who added a file.
   who = log --diff-filter=A --
+
+[user]
+	name = Alex Weber
+	email = alexweber15@gmail.com
