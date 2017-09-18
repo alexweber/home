@@ -16,4 +16,4 @@ fi
 # fi;
 
 # BTSH.
-source "$HOME/Bluetent/btsh/btsh.plugin.zsh"
+#source "$HOME/Bluetent/btsh/btsh.plugin.zsh"

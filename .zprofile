@@ -46,8 +46,8 @@ path=(
   /usr/local/{bin,sbin}
   "${ZDOTDIR:-$HOME}/bin"
   "${ZDOTDIR:-$HOME}/.composer/vendor/bin"
-  /Applications/MAMP/Library/bin
-  "${ZDOTDIR:-$HOME}/Developer/gsutil"
+  #/Applications/MAMP/Library/bin
+  #"${ZDOTDIR:-$HOME}/Developer/gsutil"
   $path
 )
 
@@ -85,23 +85,26 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 
 # NVM.
-# export NVM_DIR=~/.nvm
-# source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # Drupal.
 #export PATH=/Applications/MAMP/bin/php/php5.3.29/bin:$PATH
 #export DRUSH_PHP=/Applications/MAMP/bin/php/php5.3.29/bin/php
 
-export PATH=/Applications/MAMP/bin/php/php5.6.10/bin:$PATH
-export DRUSH_PHP=/Applications/MAMP/bin/php/php5.6.10/bin/php
+#export PATH=/Applications/MAMP/bin/php/php5.6.10/bin:$PATH
+#export DRUSH_PHP=/Applications/MAMP/bin/php/php5.6.10/bin/php
 
 # Android Dev
 export JAVA_HOME=$(/usr/libexec/java_home)
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
+# Yarn
+export PATH="$PATH:`yarn global bin`"
+
 # Keep a reasonably long history.
-export HISTSIZE=4096;
-# export HISTSIZE=8192;
+#export HISTSIZE=4096;
+export HISTSIZE=8192;
 
 # Keep even more history lines inside the file, so we can still look up
 # previous commands without needlessly cluttering the current shell's history.
@@ -109,7 +112,8 @@ export HISTFILESIZE=16384;
 # export HISTFILESIZE=32768;
 
 # When executing the same command twice or more in a row, only store it once.
-# export HISTCONTROL=ignoredups;
+export HISTCONTROL=ignoredups;
+
 # Ignore commands that start with spaces and duplicates
 export HISTCONTROL=ignoreboth
 

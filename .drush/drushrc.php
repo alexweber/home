@@ -344,7 +344,7 @@ $unsuck_modules = array(
   'overlay',
   'rdf',
   'toolbar',
-  'serach',
+  'search',
   'shortcut',
 );
 $unsuck_modules = implode(',', $unsuck_modules);
@@ -371,17 +371,43 @@ $options['shell-aliases']['sandbox'] = $sandbox_command;
 // $options['cache'] = TRUE;
 
 // Skip contents from certain tables and other tables entirely when doing sql dumps and syncs.
-$options['structure-tables']['common'] = array('cache', 'cache_*', 'history', 'search_*', 'sessions', 'watchdog', 'field_revision_*', 'webform_submitted_data', 'webform_submissions', 'rc_core_order');
-$options['skip-tables']['common'] = array('migration_*');
+$options['structure-tables']['common'] = array(
+  'advagg_*',
+  'cache',
+  'cache_*',
+  'history',
+  'migration_*',
+  'search_total',
+  'search_node_links',
+  'search_index',
+  'search_dataset',
+  'search_api_item',
+  'sessions',
+  'watchdog',
+  'node_revision',
+  'field_deleted_*',
+  'field_revision_*',
+  'webform_submitted_data',
+  'webform_submissions',
+  'rc_core_order',
+  'rc_core_order_sps_temp',
+);
 
 // Default options for sql-sync.
 $command_specific['sql-sync'] = array(
+  // Always use verbose output.
+  'verbose' => TRUE,
+  // Never use cache.
+  'no-cache' => TRUE,
+  // Ignore common structure tables.
+  'structure-tables-list' => 'common',
+);
+// Default options for sql-sync.
+$command_specific['sql-dump'] = array(
 	// Always use verbose output.
   'verbose' => TRUE,
-	// Never use cache.
-  'no-cache' => TRUE,
 	// Ignore common structure tables.
-  'structure-tables-key' => 'common',
+  'structure-tables-list' => 'common',
 );
 
 // Default options for rsync.

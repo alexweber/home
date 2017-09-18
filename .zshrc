@@ -13,18 +13,19 @@ fi
 # Customize to your needs...
 
 # Laziness FTW.
-alias a="atom"
+alias a="atom-beta"
 alias g="git"
 alias h="history"
 alias s="subl"
-alias d="drush"
+#alias d="drush"
 alias dm="docker-machine"
 #alias gh="gh-home"
 alias gt="gittower"
 alias ws="webstorm"
+alias ps="phpstorm"
 
 # BFG
-alias bfg='java -jar ~/Developer/bfg.jar'
+#alias bfg='java -jar ~/Developer/bfg.jar'
 
 # TMUX
 #alias tma='tmux attach -d -t'
@@ -33,23 +34,23 @@ alias bfg='java -jar ~/Developer/bfg.jar'
 #alias tmk='tmux kill-session -t'
 
 # Drush.
-alias dun="drush pm-uninstall --yes"
-alias dup="drush updatedb --yes"
+#alias dun="drush pm-uninstall --yes"
+#alias dup="drush updatedb --yes"
 
 # Include Drush bash customizations.
-if [ -f "~/.drush/drush.bashrc" ] ; then
-  source ~/.drush/drush.bashrc
-fi
+#if [ -f "~/.drush/drush.bashrc" ] ; then
+#  source ~/.drush/drush.bashrc
+#fi
 
 # Include Drush completion.
-if [ -f "~/.drush/drush.complete.sh" ] ; then
-  source ~/.drush/drush.complete.sh
-fi
+#if [ -f "~/.drush/drush.complete.sh" ] ; then
+#  source ~/.drush/drush.complete.sh
+#fi
 
 # Include Drush prompt customizations.
-if [ -f "~/.drush/drush.prompt.sh" ] ; then
-  source ~/.drush/drush.prompt.sh
-fi
+#if [ -f "~/.drush/drush.prompt.sh" ] ; then
+#  source ~/.drush/drush.prompt.sh
+#fi
 
 # Pantheon.
 # alias terminus="$HOME/pantheon-cli/bin/terminus"
@@ -61,7 +62,6 @@ fi
 # alias simpletest="php scripts/run-tests.sh --color --verbose"
 
 # NPM.
-alias ni="npm install"
 alias nis="npm install --save"
 alias nid="npm install --save-dev"
 alias nig="npm install --global"
@@ -72,8 +72,11 @@ alias nr="npm run"
 alias nf="npm cache clean && rm -rf node_modules && npm install"
 
 # Typos begone.
-alias druhs="drush"
-alias drsuh="drush"
+#alias druhs="drush"
+#alias drsuh="drush"
+
+# Hub.
+eval "$(hub alias -s)"
 
 # List only directories.
 alias lsd='ls -l | grep "^d"'
@@ -92,7 +95,7 @@ alias usd="cconv 1 usd brl"
 alias eur="cconv 1 eur brl"
 
 # Create a new MySQL database.
-alias mc="mysql-create"
+# alias mc="mysql-create"
 
 # Truncate a MySQL database.
 # alias mr="mysql-reset"
@@ -100,6 +103,14 @@ alias mc="mysql-create"
 # Start Mailcatcher ("catch mail").
 # alias cm="mailcatcher --smtp-port 30000"
 
+# Maya.
+alias maya='docker run -it --rm -v $(pwd):/usr/src/plugin-repo --name maya-running maya'
+
+#alias wigeon='cd ~/WizeHive/wigeon; docker run -d -p 8080:80 -v $(pwd):/var/www/html --name wigeon wigeon'
+
+alias wigup='cd ~/WizeHive/omuras; docker-compose -f portals.yml up -d; open http://portals.wizehive-dev.com:802/portal/'
+
+alias wigdown='cd ~/WizeHive/omuras; docker-compose -f portals.yml down'
 
 #
 # Functions
@@ -111,10 +122,10 @@ function mkd() {
 }
 
 ## Create a new directory, enter it and clone a repo there.
-function gi() {
-  mkdir -p "$1" && cd "$1";
-  git clone "$2" .
-}
+#function gi() {
+#  mkdir -p "$1" && cd "$1";
+#  git clone "$2" .
+#}
 
 # `tre` is a shorthand for `tree` with hidden files and color enabled, ignoring
 # the `.git` directory, listing directories first. The output gets piped into
